@@ -1,0 +1,53 @@
+/* ============================================= */
+
+
+/*              Base styles                      */
+
+
+/* ============================================= */
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    width: 100%;
+    height: auto;
+}
+
+
+/* ============================================= */
+
+
+/*              Typography                       */
+
+
+/* ============================================= */
+
+.headline {
+    &-primary {
+        color: $color-primary;
+        margin-left: 10px;
+    }
+    &-secondary {
+        font-weight: $font-light;
+        color: $color-text;
+    }
+}
+
+.link {
+    color: $color-secondary;
+    font-weight: $font-normal;
+}
+
+.blockquote {
+    font-size: 1.5em;
+    font-weight: $font-light;
+    font-style: italic;
+    margin-left: 20px;
+    padding-left: 20px;
+    border-left: 8px solid $color-primary;
+    border-radius: $corner-curve;
+}
