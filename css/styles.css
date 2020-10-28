@@ -363,11 +363,19 @@ body {
 
 svg {
   fill: #fff;
+  width: 25px;
+  height: 25px;
 }
 
 .main-nav {
   background-color: #7c80c6;
   color: #fff;
+  height: 80px;
+}
+
+.profile-pic {
+  border-radius: 50%;
+  height: 55px;
 }
 
 /*# sourceMappingURL=styles.css.map */
