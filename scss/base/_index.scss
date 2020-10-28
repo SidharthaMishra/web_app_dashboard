@@ -2,4 +2,26 @@
 //              Base Imports                    
 // =============================================
 @import 'normalize';
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600&display=swap');
 @import 'typography';
+
+/* ============================================= */
+
+
+/*              Base styles                      */
+
+
+/* ============================================= */
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    width: 100%;
+    height: auto;
+    font-family: $font-family-stack;
+    font-weight: $font-weight-reg;
+}
