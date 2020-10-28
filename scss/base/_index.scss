@@ -25,3 +25,7 @@ body {
     font-family: $font-family-stack;
     font-weight: $font-weight-reg;
 }
+
+svg {
+    fill: $font-accent-color;
+}
