@@ -367,10 +367,18 @@ svg {
   height: 25px;
 }
 
+ul {
+  list-style-type: none;
+}
+
 .main-nav {
   background-color: #7c80c6;
   color: #fff;
   height: 80px;
+  display: flex;
+}
+.main-nav .left {
+  left: 0;
 }
 
 .profile-pic {
