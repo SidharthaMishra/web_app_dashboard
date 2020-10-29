@@ -371,14 +371,85 @@ ul {
   list-style-type: none;
 }
 
-.main-nav {
-  background-color: #7c80c6;
-  color: #fff;
-  height: 80px;
-  display: flex;
+img {
+  display: inline-block;
 }
-.main-nav .left {
-  left: 0;
+
+.main-header {
+  background-color: #7c80c6;
+}
+
+.main-nav {
+  color: #fff;
+  height: 90px;
+  padding: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.main-nav li {
+  display: inline-block;
+}
+
+.logo {
+  margin-left: 15px;
+  font-size: 1.25rem;
+  /*20px*/
+}
+
+.trademark {
+  font-size: 0.75rem;
+  /*12px*/
+  vertical-align: super;
+}
+
+.bold {
+  font-weight: 600;
+}
+
+.right {
+  margin-left: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.notifications {
+  align-self: flex-end;
+}
+
+.bell {
+  width: 1.25rem;
+  /*20px*/
+}
+
+.user-info {
+  text-align: center;
+}
+
+.user-name,
+.profile-pic {
+  display: none;
+}
+
+.profile-pic {
+  margin-left: 10px;
+  width: 45px;
+  height: auto;
+}
+
+.menu {
+  display: inline-block;
+  margin-left: 15px;
+  padding: 0 10px 0 15px;
+  font-size: 1.875rem;
+  border-left: 1px solid #595b83;
+  /*30px*/
+}
+
+.bell:hover,
+.menu:hover {
+  cursor: pointer;
 }
 
 .profile-pic {
