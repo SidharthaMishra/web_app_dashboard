@@ -359,6 +359,7 @@ body {
   height: auto;
   font-family: "Open Sans", sans-serif;
   font-weight: 300;
+  background-color: lightgray;
 }
 
 svg {
@@ -381,7 +382,7 @@ img {
 
 .main-nav {
   color: #fff;
-  height: 90px;
+  height: 100%;
   padding: 10px;
   display: flex;
   justify-content: space-between;
@@ -455,6 +456,11 @@ img {
 .profile-pic {
   border-radius: 50%;
   height: 55px;
+}
+
+.page-grid {
+  display: grid;
+  grid-template-rows: 90px 1fr;
 }
 
 /*# sourceMappingURL=styles.css.map */
