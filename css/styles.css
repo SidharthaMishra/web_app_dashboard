@@ -415,13 +415,20 @@ img {
   align-items: center;
 }
 
+.search-mobile {
+  margin-right: 25px;
+  font-weight: 300;
+  font-size: 1.55rem;
+}
+
 .notifications {
   align-self: flex-end;
+  width: 1.25rem;
+  /* 20px */
 }
 
 .bell {
-  width: 1.25rem;
-  /*20px*/
+  width: 100%;
 }
 
 .user-info {
@@ -444,8 +451,8 @@ img {
   margin-left: 15px;
   padding: 0 10px 0 15px;
   font-size: 1.875rem;
-  border-left: 1px solid #595b83;
   /*30px*/
+  border-left: 1px solid #595b83;
 }
 
 .bell:hover,
