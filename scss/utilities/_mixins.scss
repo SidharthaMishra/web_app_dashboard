@@ -1,0 +1,7 @@
+@mixin rotate($deg:0deg) {
+    transform: rotate($deg);
+}
+
+@mixin transition($prop, $duration, $func:'linear') {
+    transition: $prop $duration $func;
+}
