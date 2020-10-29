@@ -470,7 +470,8 @@ img {
 }
 
 .bell:hover,
-.menu:hover {
+.menu:hover,
+.search {
   cursor: pointer;
 }
 
