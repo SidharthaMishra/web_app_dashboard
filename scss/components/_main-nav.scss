@@ -37,7 +37,17 @@
     align-items: center;
 }
 
-.search-mobile {
+.mobile-search-box {
+    margin: 0 10px;
+    input {
+        display: none;
+        border-radius: 3px;
+        height: 25px;
+        border: none;
+    }
+}
+
+.search {
     margin-right: 25px;
     font-weight: $font-weight-reg;
     font-size: 1.55rem;

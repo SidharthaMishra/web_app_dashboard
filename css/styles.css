@@ -376,6 +376,10 @@ img {
   display: inline-block;
 }
 
+.hidden {
+  display: none;
+}
+
 .main-header {
   background-color: #7c80c6;
 }
@@ -415,7 +419,17 @@ img {
   align-items: center;
 }
 
-.search-mobile {
+.mobile-search-box {
+  margin: 0 10px;
+}
+.mobile-search-box input {
+  display: none;
+  border-radius: 3px;
+  height: 25px;
+  border: none;
+}
+
+.search {
   margin-right: 25px;
   font-weight: 300;
   font-size: 1.55rem;
