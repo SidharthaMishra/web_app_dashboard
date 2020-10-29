@@ -433,6 +433,10 @@ img {
   margin-right: 25px;
   font-weight: 300;
   font-size: 1.55rem;
+  transition: transform 0.2s ease;
+}
+.search:hover {
+  transform: rotate(-15deg);
 }
 
 .notifications {
@@ -443,6 +447,10 @@ img {
 
 .bell {
   width: 100%;
+  transition: transform 0.2s ease;
+}
+.bell:hover {
+  transform: rotate(15deg);
 }
 
 .user-info {

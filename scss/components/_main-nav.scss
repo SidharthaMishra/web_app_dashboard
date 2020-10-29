@@ -51,6 +51,10 @@
     margin-right: 25px;
     font-weight: $font-weight-reg;
     font-size: 1.55rem;
+    @include transition(transform, 0.2s, ease);
+    &:hover {
+        @include rotate(-15deg);
+    }
 }
 
 .notifications {
@@ -61,6 +65,10 @@
 
 .bell {
     width: 100%;
+    @include transition(transform, 0.2s, ease);
+    &:hover {
+        @include rotate(15deg);
+    }
 }
 
 .user-info {
