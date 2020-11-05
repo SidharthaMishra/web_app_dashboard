@@ -341,10 +341,6 @@ template {
 /* ============================================= */
 /*              Typography                       */
 /* ============================================= */
-.st0 {
-  color: #fff;
-}
-
 /* ============================================= */
 /*              Base styles                      */
 /* ============================================= */
@@ -370,6 +366,10 @@ svg {
 
 ul {
   list-style-type: none;
+}
+
+li {
+  display: inline-block;
 }
 
 img {
@@ -423,10 +423,35 @@ img {
   margin: 0 10px;
 }
 .mobile-search-box input {
-  display: none;
   border-radius: 3px;
   height: 25px;
   border: none;
+}
+
+@keyframes hide {
+  from {
+    width: 100%;
+  }
+  to {
+    width: 0%;
+  }
+}
+@keyframes show {
+  from {
+    width: 0%;
+  }
+  to {
+    width: 100%;
+  }
+}
+.fadeOut {
+  animation: hide 0.5s ease-in-out;
+  width: 0%;
+}
+
+.fadeIn {
+  animation: show 0.5s ease-in-out;
+  width: 100%;
 }
 
 .search {
