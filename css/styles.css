@@ -430,7 +430,7 @@ img {
   border: none;
 }
 
-@keyframes hide {
+@keyframes slideOut {
   from {
     width: 100%;
   }
@@ -438,7 +438,7 @@ img {
     width: 0%;
   }
 }
-@keyframes show {
+@keyframes slideIn {
   from {
     width: 0%;
   }
@@ -446,14 +446,14 @@ img {
     width: 100%;
   }
 }
-.fadeOut {
-  animation: hide 0.5s ease-in-out;
-  width: 0%;
+.slideOut {
+  animation: slideOut 0.3s ease-in-out;
+  animation-fill-mode: forwards;
 }
 
-.fadeIn {
-  animation: show 0.5s ease-in-out;
-  width: 100%;
+.slideIn {
+  animation: slideIn 0.3s ease-in-out;
+  animation-fill-mode: forwards;
 }
 
 .search {

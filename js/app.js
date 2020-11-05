@@ -4,14 +4,14 @@ const mobileSearchBox = document.querySelector(".mobile-search-box>input");
 searchIcon.addEventListener("click", function() {
 
     if (mobileSearchBox.classList.contains("hidden")) {
-        mobileSearchBox.classList.add("fadeIn");
+        mobileSearchBox.classList.add("slideIn");
         mobileSearchBox.classList.remove("hidden");
-    } else if (mobileSearchBox.classList.contains("fadeIn")) {
-        mobileSearchBox.classList.remove("fadeIn");
-        mobileSearchBox.classList.add("fadeOut");
-    } else if (mobileSearchBox.classList.contains("fadeOut")) {
-        mobileSearchBox.classList.remove("fadeOut");
-        mobileSearchBox.classList.add("fadeIn");
+    } else if (mobileSearchBox.classList.contains("slideIn")) {
+        mobileSearchBox.classList.remove("slideIn");
+        mobileSearchBox.classList.add("slideOut");
+    } else if (mobileSearchBox.classList.contains("slideOut")) {
+        mobileSearchBox.classList.remove("slideOut");
+        mobileSearchBox.classList.add("slideIn");
     }
 
 });
