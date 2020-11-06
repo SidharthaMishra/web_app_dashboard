@@ -421,33 +421,37 @@ img {
 
 .mobile-search-box {
   margin: 0 10px;
-  transform: rotate(180deg);
 }
 .mobile-search-box input {
-  transform: rotate(180deg);
   border-radius: 3px;
-  height: 25px;
+  height: 30px;
   border: none;
+  transform: translate3d(5%, 0, 0);
+  opacity: 0%;
 }
 
 @keyframes slideOut {
   from {
-    width: 100%;
+    transform: translate3d(0, 0, 0);
+    opacity: 100%;
   }
   to {
-    width: 0%;
+    transform: translate3d(5%, 0, 0);
+    opacity: 0%;
   }
 }
 @keyframes slideIn {
   from {
-    width: 0%;
+    transform: translate3d(5%, 0, 0);
+    opacity: 0%;
   }
   to {
-    width: 100%;
+    transform: translate3d(0, 0, 0);
+    opacity: 100%;
   }
 }
 .slideOut {
-  animation: slideOut 0.3s ease-in-out;
+  animation: slideOut 0.2s ease-in-out;
   animation-fill-mode: forwards;
 }
 
