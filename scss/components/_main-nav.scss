@@ -133,3 +133,22 @@
 .search:hover {
     cursor: pointer;
 }
+
+
+/* Notifications Dropdown */
+
+.notifications-dropdown {
+    width: 50%;
+    padding: 1px;
+    background-color: #fff;
+    float: right;
+    margin-right: 0px;
+    li {
+        display: block;
+        padding: 15px;
+        border-bottom: 0.5px solid gray;
+    }
+    a {
+        color: #000;
+    }
+}
