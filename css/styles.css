@@ -520,7 +520,8 @@ img {
   padding: 1px;
   background-color: #fff;
   float: right;
-  margin-right: 0px;
+  transform: translate3d(0, -2.5%, 0);
+  opacity: 0;
 }
 .notifications-dropdown li {
   display: block;
@@ -529,6 +530,36 @@ img {
 }
 .notifications-dropdown a {
   color: #000;
+}
+
+@keyframes drop {
+  from {
+    transform: translate3d(0, -2.5%, 0);
+    opacity: 0;
+  }
+  to {
+    transform: translate3d(0, 0, 0);
+    opacity: 100%;
+  }
+}
+@keyframes lift {
+  from {
+    transform: translate3d(0, 0, 0);
+    opacity: 100%;
+  }
+  to {
+    transform: translate3d(0, -2.5%, 0);
+    opacity: 0;
+  }
+}
+.drop {
+  animation: drop 0.2s ease-in-out;
+  animation-fill-mode: forwards;
+}
+
+.lift {
+  animation: lift 0.2s ease-in-out;
+  animation-fill-mode: forwards;
 }
 
 .profile-pic {
