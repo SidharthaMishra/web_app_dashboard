@@ -562,6 +562,9 @@ img {
   padding: 15px;
   border-bottom: 0.5px solid gray;
 }
+.notifications-dropdown li:hover, .notifications-dropdown li:active {
+  background-color: #f2f2f2;
+}
 .notifications-dropdown a {
   color: #000;
 }
