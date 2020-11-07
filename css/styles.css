@@ -557,16 +557,17 @@ img {
   z-index: 1;
   float: right;
 }
-.notifications-dropdown li {
+.notifications-dropdown a {
+  color: #000;
+}
+
+.notification {
   display: block;
   padding: 15px;
   border-bottom: 0.5px solid gray;
 }
-.notifications-dropdown li:hover, .notifications-dropdown li:active {
+.notification:hover, .notification:active {
   background-color: #f2f2f2;
-}
-.notifications-dropdown a {
-  color: #000;
 }
 
 .drop {
