@@ -541,12 +541,6 @@ img {
   border-left: 1px solid #595b83;
 }
 
-.bell:hover,
-.menu:hover,
-.search:hover {
-  cursor: pointer;
-}
-
 /* Notifications Dropdown */
 .notifications-dropdown {
   width: 50%;
@@ -634,6 +628,13 @@ img {
   display: block;
   text-align: center;
   font-size: 0.875rem;
+}
+
+/* Cursor on Hover */
+.main-nav li:hover,
+.mobile-dropdown li,
+.mobile-user-info {
+  cursor: pointer;
 }
 
 /*-------------------------------*/
