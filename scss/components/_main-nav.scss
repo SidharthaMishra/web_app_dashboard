@@ -99,6 +99,7 @@
 .bell {
     width: 100%;
     height: 100%;
+    vertical-align: bottom;
     @include transition(transform, 0.2s, ease);
     &:hover {
         @include rotate(15deg);
