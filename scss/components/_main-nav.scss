@@ -98,10 +98,21 @@
 
 .bell {
     width: 100%;
+    height: 100%;
     @include transition(transform, 0.2s, ease);
     &:hover {
         @include rotate(15deg);
     }
+}
+
+.notification-badge {
+    position: relative;
+    width: 5px;
+    height: 5px;
+    border-radius: 50%;
+    background-color: green;
+    top: -25px;
+    left: 11px;
 }
 
 .user-info {
