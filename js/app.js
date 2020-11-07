@@ -2,6 +2,7 @@ document.addEventListener("DOMContentLoaded", function() {
     const searchIcon = document.querySelector(".search");
     const mobileSearchBox = document.querySelector(".mobile-search-box>input");
     const bell = document.querySelector(".bell");
+    const notificationBadge = document.querySelector(".notification-badge");
     const notificationsDropdown = document.querySelector(".notifications-dropdown");
 
     //Event Listeners
@@ -21,6 +22,10 @@ document.addEventListener("DOMContentLoaded", function() {
     });
 
     bell.addEventListener("click", function() {
+        let nbStyles = getComputedStyle(notificationBadge);
+        if (nbStyles.visibility === "visible") {
+            notificationBadge.style.visibility = "hidden";
+        }
 
         if (notificationsDropdown.classList.contains("hidden")) {
             if (notificationsDropdown.classList.contains("lift")) {
