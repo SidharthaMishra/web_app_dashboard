@@ -165,6 +165,13 @@
     height: 80px;
     display: flex;
     align-items: center;
+    /*Hover Effects for all items in nav*/
+    li:hover,
+    li:active,
+    .mobile-user-info:hover,
+    .mobile-user-info:active {
+        background-color: darken($secondary-color, 5%);
+    }
 }
 
 .mobile-dropdown {
@@ -173,6 +180,14 @@
     display: flex;
     align-items: center;
     justify-content: space-around;
+    li {
+        display: inline-block;
+        flex-basis: 33%;
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
 }
 
 .mobile-user-info {
@@ -198,6 +213,9 @@
     text-align: center;
     font-size: 0.875rem;
 }
+
+
+/*-------------------------------*/
 
 .hidden {
     display: none;

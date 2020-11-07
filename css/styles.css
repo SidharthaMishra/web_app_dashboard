@@ -583,6 +583,13 @@ img {
   height: 80px;
   display: flex;
   align-items: center;
+  /*Hover Effects for all items in nav*/
+}
+.mobile-secondary-nav li:hover,
+.mobile-secondary-nav li:active,
+.mobile-secondary-nav .mobile-user-info:hover,
+.mobile-secondary-nav .mobile-user-info:active {
+  background-color: #4f5074;
 }
 
 .mobile-dropdown {
@@ -591,6 +598,14 @@ img {
   display: flex;
   align-items: center;
   justify-content: space-around;
+}
+.mobile-dropdown li {
+  display: inline-block;
+  flex-basis: 33%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .mobile-user-info {
@@ -617,6 +632,7 @@ img {
   font-size: 0.875rem;
 }
 
+/*-------------------------------*/
 .hidden {
   display: none;
 }
