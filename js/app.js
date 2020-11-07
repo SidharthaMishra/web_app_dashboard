@@ -4,7 +4,8 @@ document.addEventListener("DOMContentLoaded", function() {
     const bell = document.querySelector(".bell");
     const notificationBadge = document.querySelector(".notification-badge");
     const notificationsDropdown = document.querySelector(".notifications-dropdown");
-
+    const mobileMenuIcon = document.querySelector(".menu");
+    const mobileMenuDropdown = document.querySelector(".mobile-secondary-nav");
     //Event Listeners
     searchIcon.addEventListener("click", function() {
 
@@ -46,6 +47,26 @@ document.addEventListener("DOMContentLoaded", function() {
 
     });
 
+    mobileMenuIcon.addEventListener("click", function() {
+        console.log("Menu Icon Clicked!");
+
+        if (mobileMenuDropdown.classList.contains("hidden")) {
+            if (mobileMenuDropdown.classList.contains("lift")) {
+                mobileMenuDropdown.classList.remove("lift");
+            }
+            mobileMenuDropdown.classList.add("drop");
+            mobileMenuDropdown.classList.remove("hidden");
+
+        } else {
+            if (mobileMenuDropdown.classList.contains("drop")) {
+                mobileMenuDropdown.classList.remove("drop");
+                mobileMenuDropdown.classList.add("lift");
+                setTimeout(function() {
+                    mobileMenuDropdown.classList.add("hidden");
+                }, 200);
+            }
+        }
+    });
 
 
 });
