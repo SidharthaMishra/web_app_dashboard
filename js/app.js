@@ -7,7 +7,9 @@ document.addEventListener("DOMContentLoaded", function() {
     const mobileMenuIcon = document.querySelector(".menu");
     const mobileMenuDropdown = document.querySelector(".mobile-secondary-nav");
     const alertsContainer = document.querySelector(".alerts-container");
+
     //Event Listeners
+    //Hide/Show Search Box on Mobile
     searchIcon.addEventListener("click", function() {
 
         if (mobileSearchBox.classList.contains("hidden")) {
@@ -23,6 +25,7 @@ document.addEventListener("DOMContentLoaded", function() {
 
     });
 
+    //Hide/Show Notifications Dropdown
     bell.addEventListener("click", function() {
         let nbStyles = getComputedStyle(notificationBadge);
         if (nbStyles.visibility === "visible") {
@@ -48,9 +51,8 @@ document.addEventListener("DOMContentLoaded", function() {
 
     });
 
+    //Hide/Show Mobile Menu Dropdown
     mobileMenuIcon.addEventListener("click", function() {
-        console.log("Menu Icon Clicked!");
-
         if (mobileMenuDropdown.classList.contains("hidden")) {
             if (mobileMenuDropdown.classList.contains("lift")) {
                 mobileMenuDropdown.classList.remove("lift");
