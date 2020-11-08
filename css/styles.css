@@ -678,4 +678,29 @@ img {
   grid-template-rows: 90px 1fr;
 }
 
+.alert {
+  background-color: #7c80c6;
+  color: #fff;
+  font-size: 0.75rem;
+  margin: 2px;
+  padding: 5px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+.alert h4 {
+  align-self: flex-start;
+}
+.alert h4,
+.alert .ion-close {
+  display: inline-block;
+}
+.alert p {
+  margin: 3px 0;
+}
+.alert .ion-close {
+  align-self: flex-end;
+  position: absolute;
+}
+
 /*# sourceMappingURL=styles.css.map */
