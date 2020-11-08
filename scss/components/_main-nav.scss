@@ -164,19 +164,6 @@
     height: 80px;
     display: flex;
     align-items: center;
-    /*Hover Effects for all items in nav*/
-    li,
-    .mobile-user-info {
-        border-bottom: 2px solid transparent;
-        transition: border-bottom 0.2s ease;
-    }
-    li:hover,
-    li:active,
-    .mobile-user-info:hover,
-    .mobile-user-info:active {
-        background-color: darken($secondary-color, 5%);
-        border-bottom: 2px solid $highlight-color;
-    }
 }
 
 .mobile-dropdown {
@@ -217,6 +204,20 @@
     display: block;
     text-align: center;
     font-size: 0.875rem;
+}
+
+
+/* Hover Effects for Nav Options */
+
+.nav-option {
+    border-bottom: 2px solid transparent;
+    transition: border-bottom 0.2s ease;
+}
+
+.nav-option:hover,
+.nav-option:active {
+    background-color: darken($secondary-color, 5%);
+    border-bottom: 2px solid $highlight-color;
 }
 
 

@@ -581,19 +581,6 @@ img {
   height: 80px;
   display: flex;
   align-items: center;
-  /*Hover Effects for all items in nav*/
-}
-.mobile-secondary-nav li,
-.mobile-secondary-nav .mobile-user-info {
-  border-bottom: 2px solid transparent;
-  transition: border-bottom 0.2s ease;
-}
-.mobile-secondary-nav li:hover,
-.mobile-secondary-nav li:active,
-.mobile-secondary-nav .mobile-user-info:hover,
-.mobile-secondary-nav .mobile-user-info:active {
-  background-color: #4f5074;
-  border-bottom: 2px solid #58cf76;
 }
 
 .mobile-dropdown {
@@ -634,6 +621,18 @@ img {
   display: block;
   text-align: center;
   font-size: 0.875rem;
+}
+
+/* Hover Effects for Nav Options */
+.nav-option {
+  border-bottom: 2px solid transparent;
+  transition: border-bottom 0.2s ease;
+}
+
+.nav-option:hover,
+.nav-option:active {
+  background-color: #4f5074;
+  border-bottom: 2px solid #58cf76;
 }
 
 /* Cursor on Hover */
