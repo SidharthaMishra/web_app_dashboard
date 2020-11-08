@@ -427,6 +427,9 @@ ul {
 li {
   display: inline-block;
 }
+li:hover {
+  cursor: pointer;
+}
 
 img {
   display: inline-block;
