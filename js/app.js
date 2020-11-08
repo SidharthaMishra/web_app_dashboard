@@ -6,6 +6,7 @@ document.addEventListener("DOMContentLoaded", function() {
     const notificationsDropdown = document.querySelector(".notifications-dropdown");
     const mobileMenuIcon = document.querySelector(".menu");
     const mobileMenuDropdown = document.querySelector(".mobile-secondary-nav");
+    const alertsContainer = document.querySelector(".alerts-container");
     //Event Listeners
     searchIcon.addEventListener("click", function() {
 
@@ -68,5 +69,13 @@ document.addEventListener("DOMContentLoaded", function() {
         }
     });
 
+    //Remove Alerts when X is clicked
+    alertsContainer.addEventListener("click", function(event) {
+        let target = event.target;
+        if (target.classList.contains("ion-close")) {
+            let alert = event.target.parentNode;
+            alertsContainer.removeChild(alert);
+        }
+    });
 
 });
