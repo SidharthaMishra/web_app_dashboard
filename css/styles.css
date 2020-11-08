@@ -706,4 +706,38 @@ img {
   position: absolute;
 }
 
+.stats-container {
+  margin-top: 5px;
+  height: 800px;
+  background-color: #fff;
+  padding: 10px;
+}
+.stats-container h2 {
+  text-transform: uppercase;
+}
+
+.traffic-graph-container {
+  height: 40%;
+}
+.traffic-graph-container .traffic-view-tabs {
+  display: flex;
+  justify-content: flex-end;
+}
+.traffic-graph-container .traffic-view-tabs li {
+  margin: 5px;
+  border-radius: 20px;
+  padding: 5px 10px;
+}
+.traffic-graph-container .traffic-view-tabs li:hover {
+  background-color: #58cf76;
+}
+
+.daily-traffic-container {
+  height: 30%;
+}
+
+.mobile-users-container {
+  height: 30%;
+}
+
 /*# sourceMappingURL=styles.css.map */

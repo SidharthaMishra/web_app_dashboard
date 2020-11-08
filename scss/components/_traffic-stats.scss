@@ -1,0 +1,33 @@
+.stats-container {
+    margin-top: 5px;
+    height: 800px;
+    background-color: #fff;
+    padding: 10px;
+    h2 {
+        text-transform: uppercase;
+    }
+}
+
+.traffic-graph-container {
+    height: 40%;
+    .traffic-view-tabs {
+        display: flex;
+        justify-content: flex-end;
+        li {
+            margin: 5px;
+            border-radius: 20px;
+            padding: 5px 10px;
+        }
+        li:hover {
+            background-color: $highlight-color;
+        }
+    }
+}
+
+.daily-traffic-container {
+    height: 30%;
+}
+
+.mobile-users-container {
+    height: 30%;
+}
