@@ -709,6 +709,7 @@ img {
   height: 800px;
   background-color: #fff;
   padding: 10px;
+  border-bottom: 1px solid #d3d3d3;
 }
 
 .traffic-graph-container {
@@ -738,6 +739,7 @@ img {
 .social-stats-container {
   background-color: #fff;
   padding: 25px 0;
+  border-bottom: 1px solid #d3d3d3;
 }
 
 .social-stats-heading {
