@@ -688,25 +688,19 @@ img {
   margin: 2px;
   padding: 5px;
   display: flex;
-  flex-direction: column;
-  align-items: flex-start;
 }
 .alert:hover {
   cursor: pointer;
 }
-.alert h4 {
-  align-self: flex-start;
-}
-.alert h4,
-.alert .ion-close {
-  display: inline-block;
+.alert .alert-content {
+  flex-basis: 97%;
 }
 .alert p {
   margin: 3px 0;
 }
 .alert .ion-close {
-  align-self: flex-end;
-  position: absolute;
+  flex-basis: 3%;
+  text-align: center;
 }
 
 .stats-container {
