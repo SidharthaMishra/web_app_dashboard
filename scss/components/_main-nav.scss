@@ -164,12 +164,19 @@
     height: 80px;
     display: flex;
     align-items: center;
+    border: 2px solid transparent;
     /*Hover Effects for all items in nav*/
     li:hover,
     li:active,
     .mobile-user-info:hover,
     .mobile-user-info:active {
         background-color: darken($secondary-color, 5%);
+    }
+    li:hover,
+    li:active,
+    .mobile-user-info:hover,
+    .mobile-user-info:active {
+        border-bottom: 2px solid $highlight-color;
     }
 }
 
@@ -224,6 +231,10 @@
 
 
 /*-------------------------------*/
+
+.active {
+    border-bottom: 2px solid $highlight-color;
+}
 
 .hidden {
     display: none;

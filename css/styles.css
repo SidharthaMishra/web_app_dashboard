@@ -581,6 +581,7 @@ img {
   height: 80px;
   display: flex;
   align-items: center;
+  border: 2px solid transparent;
   /*Hover Effects for all items in nav*/
 }
 .mobile-secondary-nav li:hover,
@@ -588,6 +589,12 @@ img {
 .mobile-secondary-nav .mobile-user-info:hover,
 .mobile-secondary-nav .mobile-user-info:active {
   background-color: #4f5074;
+}
+.mobile-secondary-nav li:hover,
+.mobile-secondary-nav li:active,
+.mobile-secondary-nav .mobile-user-info:hover,
+.mobile-secondary-nav .mobile-user-info:active {
+  border-bottom: 2px solid #58cf76;
 }
 
 .mobile-dropdown {
@@ -638,6 +645,10 @@ img {
 }
 
 /*-------------------------------*/
+.active {
+  border-bottom: 2px solid #58cf76;
+}
+
 .hidden {
   display: none;
 }
