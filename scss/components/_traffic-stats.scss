@@ -12,12 +12,17 @@
         display: flex;
         justify-content: flex-end;
         li {
+            width: 80px;
+            text-align: center;
             margin: 5px;
             border-radius: 20px;
             padding: 5px 10px;
         }
-        li:hover {
+        li:hover,
+        li:active {
             background-color: $highlight-color;
+            color: #fff;
+            font-weight: $font-weight-med;
         }
     }
 }

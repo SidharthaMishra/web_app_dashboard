@@ -720,12 +720,17 @@ img {
   justify-content: flex-end;
 }
 .traffic-graph-container .traffic-view-tabs li {
+  width: 80px;
+  text-align: center;
   margin: 5px;
   border-radius: 20px;
   padding: 5px 10px;
 }
-.traffic-graph-container .traffic-view-tabs li:hover {
+.traffic-graph-container .traffic-view-tabs li:hover,
+.traffic-graph-container .traffic-view-tabs li:active {
   background-color: #58cf76;
+  color: #fff;
+  font-weight: 400;
 }
 
 .daily-traffic-container {
