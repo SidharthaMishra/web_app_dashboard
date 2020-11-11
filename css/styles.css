@@ -785,6 +785,7 @@ img {
 
 .new-members-container {
   padding: 20px 5px 0 5px;
+  border-bottom: 1px solid #d3d3d3;
 }
 .new-members-container h2 {
   margin: 0 0 25px 10px;
@@ -794,11 +795,13 @@ img {
   width: 100%;
   padding: 8px 0;
   margin: 10px 0;
-  border-bottom: 1px solid #d3d3d3;
   display: flex;
 }
 .new-members-list li:last-child {
   margin-bottom: 0;
+}
+.new-members-list li:not(:last-child) {
+  border-bottom: 1px solid #d3d3d3;
 }
 
 .member-info {
