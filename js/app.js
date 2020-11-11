@@ -8,6 +8,11 @@ document.addEventListener("DOMContentLoaded", function() {
     const mobileMenuDropdown = document.querySelector(".mobile-secondary-nav");
     const alertsContainer = document.querySelector(".alerts-container");
 
+    //Message Form
+    const searchUserBox = document.querySelector(".user-search-box");
+    const messageBox = document.querySelector(".message-box");
+    const sendButton = document.querySelector(".send-button");
+    const messageAlertBox = document.querySelector(".message-alert-box");
     //Event Listeners
     //Hide/Show Search Box on Mobile
     searchIcon.addEventListener("click", function() {
@@ -78,6 +83,33 @@ document.addEventListener("DOMContentLoaded", function() {
             let alert = event.target.parentNode;
             alertsContainer.removeChild(alert);
         }
+    });
+
+    //Send Button Event Listener
+
+    sendButton.addEventListener("click", function(event) {
+        event.preventDefault();
+        let messageAlert = document.createElement("li");
+        messageAlert.classList.add("alert");
+
+        if (searchUserBox.value.length <= 0 || messageBox.value.length <= 0) {
+            messageAlert.classList.add("failed");
+            messageAlert.textContent = "Please provide all required info!";
+            messageAlertBox.appendChild(messageAlert);
+        } else {
+            messageAlertBox.innerHTML = "";
+            messageAlert.classList.add("success");
+            messageAlert.textContent = "Message Sent!";
+            messageAlertBox.appendChild(messageAlert);
+            messageBox.value = "";
+            searchUserBox.value = "";
+        }
+        //Remove alert from messageAlerBox after 4 seconds
+        setTimeout(function() {
+            if (messageAlertBox.children.length > 0) {
+                messageAlertBox.removeChild(messageAlertBox.children[0]);
+            }
+        }, 4000);
     });
 
 });

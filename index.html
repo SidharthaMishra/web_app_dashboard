@@ -402,11 +402,13 @@
 
                 <div class="message-user-container">
                     <h2>Message User</h2>
+                    <ul class="message-alert-box">
+                    </ul>
                     <div class="message-form-container">
-                        <form action="#" class="messsage-form">
-                            <input class="user-search-box" type="search" placeholder="Search for User">
-                            <textarea class="message-box" name="message-box" id="message-box" cols="30" rows="10" placeholder="Message for User"></textarea>
-                            <button class="button-default">Send</button>
+                        <form action="#" method="post" class="messsage-form">
+                            <input class="user-search-box" type="search" placeholder="Search for User" required>
+                            <textarea class="message-box" name="message-box" id="message-box" cols="30" rows="10" placeholder="Message for User" required></textarea>
+                            <button class="button-default send-button" type="submit">Send</button>
                         </form>
                     </div>
                 </div>

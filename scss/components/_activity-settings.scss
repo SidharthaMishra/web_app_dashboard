@@ -138,3 +138,11 @@ button {
         background-color: darken($primary-color, 5%);
     }
 }
+
+.failed {
+    background-color: #ff0000;
+}
+
+.success {
+    background-color: $highlight-color;
+}

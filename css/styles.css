@@ -923,4 +923,12 @@ button:hover {
   background-color: #6b6fbe;
 }
 
+.failed {
+  background-color: #ff0000;
+}
+
+.success {
+  background-color: #58cf76;
+}
+
 /*# sourceMappingURL=styles.css.map */
