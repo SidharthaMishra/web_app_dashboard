@@ -27,6 +27,10 @@ body {
     background-color: lightgray;
 }
 
+.main-container {
+    width: 100vw;
+}
+
 svg {
     fill: $font-accent-color;
     width: 25px;
