@@ -793,20 +793,18 @@ img {
 
 .new-members-list li {
   width: 100%;
-  padding: 8px 0;
-  margin: 10px 0;
+  padding: 18px 0;
   display: flex;
-}
-.new-members-list li:last-child {
-  margin-bottom: 0;
 }
 .new-members-list li:not(:last-child) {
   border-bottom: 1px solid #d3d3d3;
 }
 
 .member-info {
+  height: 100%;
   flex-basis: 80%;
   display: flex;
+  align-items: center;
 }
 
 .member-pic-container {
