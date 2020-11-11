@@ -2,18 +2,21 @@
     background-color: #fff;
     height: 800px;
     width: 100%;
-    padding: 25px 0;
+    padding: 5px 0;
+    /*25px 0*/
 }
 
-.new-members-container {
+.new-members-container,
+.recent-activity-container {
     padding: 20px 5px 0 5px;
     border-bottom: 1px solid $separator-color;
     h2 {
-        margin: 0 0 25px 10px;
+        margin: 5px 0 15px 10px;
     }
 }
 
-.new-members-list {
+.new-members-list,
+.recent-activity-container {
     li {
         width: 100%;
         padding: 18px 0;
@@ -24,11 +27,16 @@
     }
 }
 
-.member-info {
+.member-info,
+.activity-info {
     height: 100%;
     flex-basis: 80%;
     display: flex;
     align-items: center;
+}
+
+.activity-info {
+    flex-basis: 100%;
 }
 
 .member-pic-container {
@@ -42,10 +50,11 @@
     height: 40px;
 }
 
-.member-details {
+.member-details,
+.activity-details {
     width: 100%;
     padding-left: 3px;
-    flex-basis: 90%;
+    flex-basis: 80%;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -56,16 +65,26 @@
     font-size: 1rem;
 }
 
-.email {
+.email,
+.activity-time {
     font-size: 0.8rem;
     margin-top: 3px;
     color: $primary-color;
 }
 
-.date {
-    width: 20%;
+.date,
+.more-info {
+    flex-basis: 10%;
+    // width: 20%;
     font-size: 0.7rem;
     display: flex;
     align-items: center;
     justify-content: flex-end;
+    margin-left: auto;
+}
+
+.more-info {
+    justify-content: center;
+    font-size: 1.1rem;
+    color: $primary-color;
 }
