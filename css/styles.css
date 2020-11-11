@@ -787,18 +787,19 @@ img {
 
 .users-info-settings-container {
   background-color: #fff;
-  height: 800px;
   width: 100%;
   padding: 5px 0;
 }
 
 .new-members-container,
-.recent-activity-container {
+.recent-activity-container,
+.message-user-container {
   padding: 20px 5px 0 5px;
   border-bottom: 1px solid #d3d3d3;
 }
 .new-members-container h2,
-.recent-activity-container h2 {
+.recent-activity-container h2,
+.message-user-container h2 {
   margin: 5px 0 15px 5px;
 }
 
@@ -872,6 +873,53 @@ img {
   justify-content: center;
   font-size: 1.1rem;
   color: #7c80c6;
+}
+
+/* Message User Section */
+.message-user-container {
+  padding-bottom: 20px;
+}
+
+.message-form-container {
+  padding-top: 18px;
+}
+
+.user-search-box,
+.message-box {
+  width: 100%;
+  margin: 0 0 10px 0;
+  border: 0.5px solid #d3d3d3;
+  border-radius: 3px;
+  padding: 5px;
+}
+
+.user-search-box {
+  height: 30px;
+}
+
+.message-box {
+  resize: none;
+}
+
+button {
+  text-transform: uppercase;
+  color: #fff;
+  width: 100%;
+  height: 30px;
+  margin: 5px 0;
+  border: none;
+  border-radius: 5px;
+  font-weight: 600;
+}
+button:hover {
+  cursor: pointer;
+}
+
+.button-default {
+  background-color: #7c80c6;
+}
+.button-default:hover, .button-default:active {
+  background-color: #6b6fbe;
 }
 
 /*# sourceMappingURL=styles.css.map */
