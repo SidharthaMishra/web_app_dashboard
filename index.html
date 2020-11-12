@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="http://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
+    <link rel="stylesheet" href="css/vendor/toggle-switch.css">
     <link rel="stylesheet" href="css/styles.css">
     <title>YourApp Dashboard</title>
 </head>
@@ -412,24 +413,45 @@
                         </form>
                     </div>
                 </div>
-                <!--
+
                 <div class="settings-container">
                     <h2>Settings</h2>
-                    <form action="" class="settings-form">
-                        <label for="email-setting">Send Email Notifications</label>
-                        <input type="checkbox" name="email-setting" id="email-setting">
-                        <label for="public-profile-setting">Set Profile to Public</label>
-                        <input type="checkbox" name="public-profile-setting" id="public-profile-setting">
-                        <select name="timezone-list" id="timezone-list" placeholder="Select Timezone">
-                            <option value="#" disabled selected>Select Timezone</option>
-                            <option value="eastern">Eastern</option>
-                            <option value="mountain">Mountain</option>
-                            <option value="central">Central</option>
-                            <option value="pacific">Pacific</option>
-                        </select>
+                    <form action="#" class="settings-form" method="post">
+                        <label class="switch-light switch-material toggle-container" onclick="" for="email-setting">
+                                <input type="checkbox" name="email-setting" id="email-setting">
+                                <strong>
+                                    Send Email Notifications
+                                </strong>
+                                <span>
+                                    <span>Off</span>
+                                    <span>On</span>
+                                    <a></a>
+                                </span>
+                            </label>
+                        <label class="switch-light switch-material toggle-container" onclick="" for="profile-setting">
+                                <input type="checkbox" name="email-setting" id="profile-setting">
+                                <strong>
+                                    Set Profile to Public
+                                </strong>
+                                <span>
+                                    <span>Off</span>
+                                    <span>On</span>
+                                    <a></a>
+                                </span>
+                            </label>
+                        <div>
+                            <select name="timezone-list" id="timezone-list">
+                                <option value="#" disabled selected>Select Timezone</option>
+                                <option value="eastern">Eastern</option>
+                                <option value="mountain">Mountain</option>
+                                <option value="central">Central</option>
+                                <option value="pacific">Pacific</option>
+                            </select>
+                        </div>
+                        <button class="button-default">Save</button>
+                        <button class="button-cancel">Cancel</button>
                     </form>
                 </div>
-                -->
             </div>
         </div>
         <!-- end of main container -->

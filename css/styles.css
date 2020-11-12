@@ -794,13 +794,15 @@ img {
 
 .new-members-container,
 .recent-activity-container,
-.message-user-container {
+.message-user-container,
+.settings-container {
   padding: 20px 5px 0 5px;
   border-bottom: 1px solid #d3d3d3;
 }
 .new-members-container h2,
 .recent-activity-container h2,
-.message-user-container h2 {
+.message-user-container h2,
+.settings-container h2 {
   margin: 5px 0 15px 5px;
 }
 
@@ -923,12 +925,49 @@ button:hover {
   background-color: #6b6fbe;
 }
 
+.button-cancel {
+  background-color: #888;
+}
+.button-cancel:hover, .button-cancel:active {
+  background-color: #7b7b7b;
+}
+
 .failed {
   background-color: #ff0000;
 }
 
 .success {
   background-color: #58cf76;
+}
+
+/* Settings */
+.settings-form {
+  margin: 20px 0;
+}
+.settings-form .toggle-container {
+  margin: 20px 5px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.settings-form .toggle-container strong {
+  flex-basis: 60%;
+}
+.settings-form .toggle-container span {
+  margin-left: auto;
+}
+.settings-form label {
+  margin-right: 20px;
+}
+.settings-form div {
+  margin: 20px 5px;
+}
+.settings-form select {
+  width: 100%;
+  font-weight: 300;
+}
+.settings-form button {
+  width: 49.3%;
 }
 
 /*# sourceMappingURL=styles.css.map */
