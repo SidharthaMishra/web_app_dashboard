@@ -13,6 +13,11 @@ document.addEventListener("DOMContentLoaded", function() {
     const messageBox = document.querySelector(".message-box");
     const sendButton = document.querySelector(".send-button");
     const messageAlertBox = document.querySelector(".message-alert-box");
+
+    //Settings
+    const emailSwitch = document.querySelector("#email-setting");
+    const profileSwitch = document.querySelector("#profile-setting");
+
     //Event Listeners
     //Hide/Show Search Box on Mobile
     searchIcon.addEventListener("click", function() {
@@ -111,5 +116,46 @@ document.addEventListener("DOMContentLoaded", function() {
             }
         }, 4000);
     });
+
+    //Settings/Preferences
+    function saveSwitchState(element) {
+        if (element.checked) {
+            localStorage.setItem(element.id.toString(), "true");
+        } else {
+            localStorage.setItem(element.id.toString(), "false");
+        }
+    }
+
+    function getSwitchPreference(element) {
+        return localStorage.getItem(element.toString());
+    }
+
+    function setSwitchPreference(element, value) {
+        element.checked = value;
+    }
+
+    function loadSwitchPreferences(element) {
+        if (getSwitchPreference(element.id) === "true") {
+            setSwitchPreference(element, true);
+        } else {
+            setSwitchPreference(element, false);
+        }
+    }
+
+    //Email Settings Switch
+    emailSwitch.addEventListener("click", function() {
+        saveSwitchState(emailSwitch);
+    });
+
+    //Check and Adjust Email Settings Toggle State on Page
+    loadSwitchPreferences(emailSwitch);
+
+    //Profile Public Switch
+    profileSwitch.addEventListener("click", function() {
+        saveSwitchState(profileSwitch);
+    });
+
+    //Check and Adjust Profile Settings Toggle State on Page
+    loadSwitchPreferences(profileSwitch);
 
 });
