@@ -1,13 +1,15 @@
 .stats-container {
     margin-top: 5px;
-    height: 800px;
     background-color: #fff;
     padding: 25px 10px 10px 10px;
     border-bottom: 1px solid $separator-color;
+    &>div:not(:first-child) {
+        margin-top: 25px;
+    }
 }
 
 .traffic-graph-container {
-    height: 40%;
+    // height: 40%;
     .traffic-view-tabs {
         display: flex;
         justify-content: flex-end;
@@ -22,15 +24,23 @@
         li:active {
             background-color: $highlight-color;
             color: #fff;
-            font-weight: $font-weight-med;
+            font-weight: $font-weight-bold;
         }
     }
 }
 
 .daily-traffic-container {
-    height: 30%;
+    // height: 30%;
+    height: 150px;
 }
 
 .mobile-users-container {
-    height: 30%;
+    // height: 30%;
+    height: 150px;
+}
+
+.active-tab {
+    background-color: $highlight-color;
+    color: #fff;
+    font-weight: $font-weight-bold;
 }

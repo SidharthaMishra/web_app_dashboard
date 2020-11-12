@@ -201,12 +201,14 @@
                         <ul class="traffic-view-tabs">
                             <li>Hourly</li>
                             <li>Daily</li>
-                            <li>Weekly</li>
+                            <li class="active-tab">Weekly</li>
                             <li>Monthly</li>
                         </ul>
                     </header>
 
-                    <div class="traffic-stats"></div>
+                    <div class="traffic-stats">
+                        <canvas id="trafficLineGraph"></canvas>
+                    </div>
                 </div>
                 <div class="daily-traffic-container">
                     <h2 class="daily-traffic-heading">Daily Traffic</h2>
@@ -457,6 +459,7 @@
         <!-- end of main container -->
     </main>
     <footer></footer>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.min.js" integrity="sha512-d9xgZrVZpmmQlfonhQUvTR7lMPtO7NkZMkA0ABN3PHCbKA5nqylQ/yWlFAyY6hYgdF1Qh6nYiuADWwKB4C2WSw==" crossorigin="anonymous"></script>
     <script src="js/app.js"></script>
 </body>
 

@@ -710,15 +710,14 @@ img {
 
 .stats-container {
   margin-top: 5px;
-  height: 800px;
   background-color: #fff;
   padding: 25px 10px 10px 10px;
   border-bottom: 1px solid #d3d3d3;
 }
-
-.traffic-graph-container {
-  height: 40%;
+.stats-container > div:not(:first-child) {
+  margin-top: 25px;
 }
+
 .traffic-graph-container .traffic-view-tabs {
   display: flex;
   justify-content: flex-end;
@@ -734,15 +733,21 @@ img {
 .traffic-graph-container .traffic-view-tabs li:active {
   background-color: #58cf76;
   color: #fff;
-  font-weight: 400;
+  font-weight: 600;
 }
 
 .daily-traffic-container {
-  height: 30%;
+  height: 150px;
 }
 
 .mobile-users-container {
-  height: 30%;
+  height: 150px;
+}
+
+.active-tab {
+  background-color: #58cf76;
+  color: #fff;
+  font-weight: 600;
 }
 
 .social-stats-container {

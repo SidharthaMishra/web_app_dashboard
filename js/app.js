@@ -92,6 +92,38 @@ document.addEventListener("DOMContentLoaded", function() {
         }
     });
 
+
+    //Charts and Graphs
+    let ctx = document.getElementById('trafficLineGraph').getContext('2d');
+    let trafficWeeklyLineChart = new Chart(ctx, {
+        type: 'line',
+        data: {
+            labels: ['16-22', '23-29', '30-5', '6-12', '13-19', '20-26', '27-3', '4-10', '11-17', '18-24', '25-31'],
+            datasets: [{
+                label: 'Weekly Traffic',
+                data: [750, 1250, 1100, 1500, 2000, 1500, 1750, 1250, 1750, 2250, 1750, 2250],
+                backgroundColor: 'rgba(48.6%, 50.2%, 77.6%, 0.5)',
+                borderColor: 'rgba(48.6%, 50.2%, 77.6%)',
+                pointBorderColor: 'rgba(48.6%, 50.2%, 77.6%)',
+                pointBackgroundColor: 'rgb(255,255,255)',
+                borderWidth: 1,
+                lineTension: 0
+            }]
+        },
+        options: {
+            scales: {
+                yAxes: [{
+                    ticks: {
+                        beginAtZero: true
+                    }
+                }]
+            }
+        }
+    });
+
+
+
+
     //Send Button Event Listener
 
     sendButton.addEventListener("click", function(event) {
