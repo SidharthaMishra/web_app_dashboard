@@ -955,6 +955,7 @@ button:hover {
 }
 .settings-form .toggle-container span {
   margin-left: auto;
+  width: 100px;
 }
 .settings-form label {
   margin-right: 20px;
