@@ -17,6 +17,7 @@ document.addEventListener("DOMContentLoaded", function() {
     //Settings
     const emailSwitch = document.querySelector("#email-setting");
     const profileSwitch = document.querySelector("#profile-setting");
+    const saveSettingsButton = document.querySelector(".save-settings-button");
 
     //Event Listeners
     //Hide/Show Search Box on Mobile
@@ -142,18 +143,14 @@ document.addEventListener("DOMContentLoaded", function() {
         }
     }
 
-    //Email Settings Switch
-    emailSwitch.addEventListener("click", function() {
+    //Save Settings Button
+    saveSettingsButton.addEventListener("click", function() {
         saveSwitchState(emailSwitch);
+        saveSwitchState(profileSwitch);
     });
 
     //Check and Adjust Email Settings Toggle State on Page
     loadSwitchPreferences(emailSwitch);
-
-    //Profile Public Switch
-    profileSwitch.addEventListener("click", function() {
-        saveSwitchState(profileSwitch);
-    });
 
     //Check and Adjust Profile Settings Toggle State on Page
     loadSwitchPreferences(profileSwitch);
