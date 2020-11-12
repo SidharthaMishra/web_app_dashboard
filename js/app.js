@@ -17,6 +17,7 @@ document.addEventListener("DOMContentLoaded", function() {
     //Settings
     const emailSwitch = document.querySelector("#email-setting");
     const profileSwitch = document.querySelector("#profile-setting");
+    const timeZone = document.querySelector("#timezone-list");
     const saveSettingsButton = document.querySelector(".save-settings-button");
 
     //Event Listeners
@@ -127,7 +128,11 @@ document.addEventListener("DOMContentLoaded", function() {
         }
     }
 
-    function getSwitchPreference(element) {
+    function saveTimeZone() {
+        localStorage.setItem("timezone", timeZone.value);
+    }
+
+    function getPreference(element) {
         return localStorage.getItem(element.toString());
     }
 
@@ -136,10 +141,16 @@ document.addEventListener("DOMContentLoaded", function() {
     }
 
     function loadSwitchPreferences(element) {
-        if (getSwitchPreference(element.id) === "true") {
+        if (getPreference(element.id) === "true") {
             setSwitchPreference(element, true);
         } else {
             setSwitchPreference(element, false);
+        }
+    }
+
+    function loadTimeZonePreference() {
+        if (getPreference("timezone")) {
+            timeZone.value = getPreference("timezone");
         }
     }
 
@@ -147,6 +158,7 @@ document.addEventListener("DOMContentLoaded", function() {
     saveSettingsButton.addEventListener("click", function() {
         saveSwitchState(emailSwitch);
         saveSwitchState(profileSwitch);
+        saveTimeZone();
     });
 
     //Check and Adjust Email Settings Toggle State on Page
@@ -154,5 +166,8 @@ document.addEventListener("DOMContentLoaded", function() {
 
     //Check and Adjust Profile Settings Toggle State on Page
     loadSwitchPreferences(profileSwitch);
+
+    //Check and load Time Zone Preference
+    loadTimeZonePreference();
 
 });
