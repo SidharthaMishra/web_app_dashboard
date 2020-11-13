@@ -94,8 +94,8 @@ document.addEventListener("DOMContentLoaded", function() {
 
 
     //Charts and Graphs
-    let trafficLineGraph = document.getElementById('trafficLineGraph').getContext('2d');
-    let trafficWeeklyLineChart = new Chart(trafficLineGraph, {
+    const trafficLineGraph = document.getElementById('trafficLineGraph').getContext('2d');
+    const trafficWeeklyLineChart = new Chart(trafficLineGraph, {
         type: 'line',
         data: {
             labels: ['16-22', '23-29', '30-5', '6-12', '13-19', '20-26', '27-3', '4-10', '11-17', '18-24', '25-31'],
