@@ -736,14 +736,6 @@ img {
   font-weight: 600;
 }
 
-.daily-traffic-container {
-  height: 150px;
-}
-
-.mobile-users-container {
-  height: 150px;
-}
-
 .active-tab {
   background-color: #58cf76;
   color: #fff;

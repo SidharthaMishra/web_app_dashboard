@@ -94,8 +94,8 @@ document.addEventListener("DOMContentLoaded", function() {
 
 
     //Charts and Graphs
-    let ctx = document.getElementById('trafficLineGraph').getContext('2d');
-    let trafficWeeklyLineChart = new Chart(ctx, {
+    let trafficLineGraph = document.getElementById('trafficLineGraph').getContext('2d');
+    let trafficWeeklyLineChart = new Chart(trafficLineGraph, {
         type: 'line',
         data: {
             labels: ['16-22', '23-29', '30-5', '6-12', '13-19', '20-26', '27-3', '4-10', '11-17', '18-24', '25-31'],
@@ -121,8 +121,33 @@ document.addEventListener("DOMContentLoaded", function() {
         }
     });
 
-
-
+    //Daily Traffic Bar Graph
+    const dailyTrafficGraph = document.getElementById('dailyTrafficGraph').getContext('2d');
+    const dailyTrafficBarChart = new Chart(dailyTrafficGraph, {
+        type: 'bar',
+        data: {
+            labels: ['S', 'M', 'T', 'W', 'T', 'F', 'S'],
+            datasets: [{
+                label: 'Daily Traffic',
+                barPercentage: 0.9,
+                barThickness: 'flex',
+                maxBarThickness: 20,
+                minBarLength: 2,
+                data: [75, 100, 175, 125, 225, 200, 100],
+                backgroundColor: 'rgb(48.6%, 50.2%, 77.6%)',
+            }],
+        },
+        options: {
+            scales: {
+                yAxes: [{
+                    ticks: {
+                        min: 0,
+                        max: 250
+                    }
+                }]
+            }
+        }
+    });
 
     //Send Button Event Listener
 
