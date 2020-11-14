@@ -149,6 +149,23 @@ document.addEventListener("DOMContentLoaded", function() {
         }
     });
 
+    //Mobile/Device Users Doughnut Chart
+    const mobileUsersGraph = document.querySelector("#mobileUsersGraph").getContext("2d");
+    const mobileUsersChart = new Chart(mobileUsersGraph, {
+        type: 'doughnut',
+        data: {
+            datasets: [{
+                data: [15, 15, 70],
+                backgroundColor: ['rgb(88, 207, 118)', 'rgb(53, 174, 204)', 'rgb(124, 128, 198)'],
+                borderWidth: 0
+            }],
+            labels: ['Tablets', 'Phones', 'Desktop'],
+        },
+        options: {
+            rotation: 4.25
+        }
+    });
+
     //Send Button Event Listener
 
     sendButton.addEventListener("click", function(event) {
