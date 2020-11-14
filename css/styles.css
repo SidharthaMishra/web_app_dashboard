@@ -711,14 +711,18 @@ img {
 .stats-container {
   margin-top: 5px;
   background-color: #fff;
-  padding: 25px 10px 10px 10px;
+  padding: 25px 10px 25px 10px;
   border-bottom: 1px solid #d3d3d3;
 }
 .stats-container > div:not(:first-child) {
   margin-top: 25px;
 }
+.stats-container div[class$=-stats]:not(:last-child) {
+  margin: 20px 0 20px 0;
+}
 
 .traffic-graph-container .traffic-view-tabs {
+  margin-top: 5px;
   display: flex;
   justify-content: flex-end;
 }
