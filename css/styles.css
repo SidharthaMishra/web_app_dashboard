@@ -722,6 +722,7 @@ img {
 }
 
 .traffic-graph-container .traffic-view-tabs {
+  font-size: 0.9rem;
   margin-top: 5px;
   display: flex;
   justify-content: flex-end;
