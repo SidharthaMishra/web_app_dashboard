@@ -1,4 +1,5 @@
 document.addEventListener("DOMContentLoaded", function() {
+    //Main Nav
     const searchIcon = document.querySelector(".search");
     const mobileSearchBox = document.querySelector(".mobile-search-box>input");
     const bell = document.querySelector(".bell");
@@ -6,7 +7,14 @@ document.addEventListener("DOMContentLoaded", function() {
     const notificationsDropdown = document.querySelector(".notifications-dropdown");
     const mobileMenuIcon = document.querySelector(".menu");
     const mobileMenuDropdown = document.querySelector(".mobile-secondary-nav");
+
+    //Alerts
     const alertsContainer = document.querySelector(".alerts-container");
+
+    //Graphs
+    const trafficLineGraph = document.getElementById('trafficLineGraph').getContext('2d');
+    const dailyTrafficGraph = document.getElementById('dailyTrafficGraph').getContext('2d');
+    const mobileUsersGraph = document.querySelector("#mobileUsersGraph").getContext("2d");
 
     //Message Form
     const searchUserBox = document.querySelector(".user-search-box");
@@ -94,7 +102,6 @@ document.addEventListener("DOMContentLoaded", function() {
 
 
     //Charts and Graphs
-    const trafficLineGraph = document.getElementById('trafficLineGraph').getContext('2d');
     const trafficWeeklyLineChart = new Chart(trafficLineGraph, {
         type: 'line',
         data: {
@@ -122,7 +129,6 @@ document.addEventListener("DOMContentLoaded", function() {
     });
 
     //Daily Traffic Bar Graph
-    const dailyTrafficGraph = document.getElementById('dailyTrafficGraph').getContext('2d');
     const dailyTrafficBarChart = new Chart(dailyTrafficGraph, {
         type: 'bar',
         data: {
@@ -150,7 +156,6 @@ document.addEventListener("DOMContentLoaded", function() {
     });
 
     //Mobile/Device Users Doughnut Chart
-    const mobileUsersGraph = document.querySelector("#mobileUsersGraph").getContext("2d");
     const mobileUsersChart = new Chart(mobileUsersGraph, {
         type: 'doughnut',
         data: {
