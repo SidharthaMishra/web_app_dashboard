@@ -12,7 +12,6 @@ document.addEventListener("DOMContentLoaded", function() {
     const alertsContainer = document.querySelector(".alerts-container");
 
     //Graphs
-    const trafficLineGraph = document.getElementById('trafficLineGraph').getContext('2d');
     const dailyTrafficGraph = document.getElementById('dailyTrafficGraph').getContext('2d');
     const mobileUsersGraph = document.querySelector("#mobileUsersGraph").getContext("2d");
 
@@ -100,33 +99,155 @@ document.addEventListener("DOMContentLoaded", function() {
         }
     });
 
-
+    //-----------------//
     //Charts and Graphs
-    const trafficWeeklyLineChart = new Chart(trafficLineGraph, {
-        type: 'line',
-        data: {
-            labels: ['16-22', '23-29', '30-5', '6-12', '13-19', '20-26', '27-3', '4-10', '11-17', '18-24', '25-31'],
-            datasets: [{
-                label: 'Weekly Traffic',
-                data: [750, 1250, 1100, 1500, 2000, 1500, 1750, 1250, 1750, 2250, 1750, 2250],
-                backgroundColor: 'rgba(48.6%, 50.2%, 77.6%, 0.5)',
-                borderColor: 'rgba(48.6%, 50.2%, 77.6%)',
-                pointBorderColor: 'rgba(48.6%, 50.2%, 77.6%)',
-                pointBackgroundColor: 'rgb(255,255,255)',
-                borderWidth: 1,
-                lineTension: 0
-            }]
-        },
-        options: {
-            scales: {
-                yAxes: [{
-                    ticks: {
-                        beginAtZero: true
-                    }
-                }]
+    //-----------------//
+
+    const hourlyView = document.querySelector(".hourly-traffic");
+    const dailyView = document.querySelector(".daily-traffic");
+    const weeklyView = document.querySelector(".weekly-traffic");
+    const monthlyView = document.querySelector(".monthly-traffic");
+    const trafficViewTabs = document.querySelector(".traffic-view-tabs").children;
+    const trafficLineGraph = document.getElementById('trafficLineGraph').getContext('2d');
+    let trafficLineChart;
+
+    function removeActiveGraphView() {
+        let len = trafficViewTabs.length;
+        for (let i = 0; i < len; i++) {
+            if (trafficViewTabs[i].classList.contains("active-tab")) {
+                trafficViewTabs[i].classList.remove("active-tab");
             }
         }
-    });
+    }
+
+    function showWeeklyTraffic() {
+        removeActiveGraphView();
+        weeklyView.classList.add("active-tab");
+        trafficLineChart = new Chart(trafficLineGraph, {
+            type: 'line',
+            data: {
+                labels: ['16-22', '23-29', '30-5', '6-12', '13-19', '20-26', '27-3', '4-10', '11-17', '18-24', '25-31'],
+                datasets: [{
+                    label: 'Weekly Traffic',
+                    data: [750, 1250, 1100, 1500, 2000, 1500, 1750, 1250, 1750, 2250, 1750, 2250],
+                    backgroundColor: 'rgba(48.6%, 50.2%, 77.6%, 0.5)',
+                    borderColor: 'rgba(48.6%, 50.2%, 77.6%)',
+                    pointBorderColor: 'rgba(48.6%, 50.2%, 77.6%)',
+                    pointBackgroundColor: 'rgb(255,255,255)',
+                    borderWidth: 1,
+                    lineTension: 0
+                }]
+            },
+            options: {
+                scales: {
+                    yAxes: [{
+                        ticks: {
+                            beginAtZero: true
+                        }
+                    }]
+                }
+            }
+        });
+    }
+
+    function showMonthlyTraffic() {
+        removeActiveGraphView();
+        monthlyView.classList.add("active-tab");
+        trafficLineChart = new Chart(trafficLineGraph, {
+            type: 'line',
+            data: {
+                labels: ['1-5', '6-12', '13-19', '20-26', '27-30'],
+                datasets: [{
+                    label: 'Monthly Traffic',
+                    data: [1750, 1250, 1750, 2250, 1750],
+                    backgroundColor: 'rgba(48.6%, 50.2%, 77.6%, 0.5)',
+                    borderColor: 'rgba(48.6%, 50.2%, 77.6%)',
+                    pointBorderColor: 'rgba(48.6%, 50.2%, 77.6%)',
+                    pointBackgroundColor: 'rgb(255,255,255)',
+                    borderWidth: 1,
+                    lineTension: 0
+                }]
+            },
+            options: {
+                scales: {
+                    yAxes: [{
+                        ticks: {
+                            beginAtZero: true
+                        }
+                    }]
+                }
+            }
+        });
+    }
+
+    function showDailyTraffic() {
+        removeActiveGraphView();
+        dailyView.classList.add("active-tab");
+        trafficLineChart = new Chart(trafficLineGraph, {
+            type: 'line',
+            data: {
+                labels: ['30', '31'],
+                datasets: [{
+                    label: 'Daily Traffic',
+                    data: [2250, 1750],
+                    backgroundColor: 'rgba(48.6%, 50.2%, 77.6%, 0.5)',
+                    borderColor: 'rgba(48.6%, 50.2%, 77.6%)',
+                    pointBorderColor: 'rgba(48.6%, 50.2%, 77.6%)',
+                    pointBackgroundColor: 'rgb(255,255,255)',
+                    borderWidth: 1,
+                    lineTension: 0
+                }]
+            },
+            options: {
+                scales: {
+                    yAxes: [{
+                        ticks: {
+                            beginAtZero: true
+                        }
+                    }]
+                }
+            }
+        });
+    }
+
+    function showHourlyTraffic() {
+        removeActiveGraphView();
+        hourlyView.classList.add("active-tab");
+        trafficLineChart = new Chart(trafficLineGraph, {
+            type: 'line',
+            data: {
+                labels: ['12 am', '1 am', '2 am', '3 am', '4 am', '5 am', '6 am', '7 am', '8 am', '9 am'],
+                datasets: [{
+                    label: 'Hourly Traffic',
+                    data: [1750, 1250, 1750, 2250, 1750, 2000, 2500, 3000, 2700, 2900],
+                    backgroundColor: 'rgba(48.6%, 50.2%, 77.6%, 0.5)',
+                    borderColor: 'rgba(48.6%, 50.2%, 77.6%)',
+                    pointBorderColor: 'rgba(48.6%, 50.2%, 77.6%)',
+                    pointBackgroundColor: 'rgb(255,255,255)',
+                    borderWidth: 1,
+                    lineTension: 0
+                }]
+            },
+            options: {
+                scales: {
+                    yAxes: [{
+                        ticks: {
+                            beginAtZero: true
+                        }
+                    }]
+                }
+            }
+        });
+    }
+
+    showWeeklyTraffic(); //Weekly View by Default
+
+    //Graph View Tabs Event Listeners
+    hourlyView.addEventListener("click", showHourlyTraffic);
+    dailyView.addEventListener("click", showDailyTraffic);
+    weeklyView.addEventListener("click", showWeeklyTraffic);
+    monthlyView.addEventListener("click", showMonthlyTraffic);
+
 
     //Daily Traffic Bar Graph
     const dailyTrafficBarChart = new Chart(dailyTrafficGraph, {
