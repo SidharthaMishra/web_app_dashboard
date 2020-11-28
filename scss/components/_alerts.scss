@@ -4,6 +4,7 @@
     font-size: 0.75rem;
     margin: 2px;
     padding: 5px;
+    border-radius: 3px;
     display: flex;
     &:hover {
         cursor: pointer;
@@ -23,6 +24,8 @@
 @media (min-width:768px) {
     .alert {
         padding: 10px;
+        margin-left: 10px;
+        margin-right: 10px;
     }
     .alert-content {
         h4,

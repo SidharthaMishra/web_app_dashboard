@@ -807,6 +807,7 @@ img {
   font-size: 0.75rem;
   margin: 2px;
   padding: 5px;
+  border-radius: 3px;
   display: flex;
 }
 .alert:hover {
@@ -826,6 +827,8 @@ img {
 @media (min-width: 768px) {
   .alert {
     padding: 10px;
+    margin-left: 10px;
+    margin-right: 10px;
   }
 
   .alert-content {
