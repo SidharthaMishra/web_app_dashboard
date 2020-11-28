@@ -774,6 +774,7 @@ img {
     flex-basis: 20%;
     margin-top: 0;
     padding: 10px;
+    text-align: center;
   }
 
   .search-container {
