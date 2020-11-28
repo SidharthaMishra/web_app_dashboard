@@ -901,6 +901,22 @@ img {
   font-size: 1.5rem;
 }
 
+@media (min-width: 768px) {
+  .social-stats {
+    display: flex;
+    justify-content: space-around;
+  }
+  .social-stats > div {
+    margin: 15px;
+    border-radius: 5px;
+    padding: 15px 0;
+    border: 1px solid #d3d3d3;
+    justify-content: center;
+  }
+  .social-stats > div div[class$=icon] {
+    margin-right: 10px;
+  }
+}
 /* New Members and Recent Activity */
 .users-info-settings-container {
   background-color: #fff;
