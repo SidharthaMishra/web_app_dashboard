@@ -38,3 +38,36 @@
     color: #fff;
     font-weight: $font-weight-bold;
 }
+
+@media (min-width:768px) {
+    .stats-container {
+        padding-bottom: 0;
+        border-bottom: none;
+    }
+    .traffic-graph-container {
+        padding-bottom: 25px;
+        border-bottom: 1px solid $separator-color;
+    }
+    .stats-container>div:not(:first-child) {
+        margin-top: 0;
+    }
+    .daily-mobile-container {
+        padding: 0;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .daily-traffic-container,
+    .mobile-users-container {
+        padding: 25px 0px;
+    }
+    .daily-traffic-container {
+        border-right: 1px solid $separator-color;
+        padding-right: 10px;
+    }
+    .mobile-users-container {
+        padding-left: 10px;
+    }
+    .social-stats-container {
+        border-top: 1px solid $separator-color;
+    }
+}
