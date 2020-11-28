@@ -9,9 +9,6 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    li {
-        display: inline-block;
-    }
 }
 
 .logo {
@@ -106,8 +103,6 @@
 
 .profile-pic {
     margin-left: 10px;
-    width: 45px;
-    height: auto;
 }
 
 .menu {
@@ -268,5 +263,31 @@
     }
     #side-nav-dashboard {
         margin-left: -2px;
+    }
+    /* Main Nav */
+    .search,
+    .menu {
+        display: none;
+    }
+    .profile-pic,
+    .user-name {
+        display: inline-block;
+        height: 100%;
+    }
+    .notifications {
+        margin-right: 10px;
+    }
+    .user-info {
+        justify-self: flex-end;
+        margin-left: 10px;
+        padding: 0 10px;
+        border-left: 1px solid $secondary-color;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+    }
+    .user-name {
+        margin-left: 10px;
     }
 }
