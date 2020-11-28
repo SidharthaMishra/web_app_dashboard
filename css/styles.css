@@ -1103,4 +1103,37 @@ button:hover {
   width: 49.3%;
 }
 
+@media (min-width: 768px) {
+  .users-info-settings-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .users-info-settings-container > div {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+
+  .new-members-container,
+.message-user-container {
+    border-right: 1px solid #d3d3d3;
+  }
+
+  .settings-container {
+    display: flex;
+    flex-direction: column;
+  }
+  .settings-container form {
+    height: 100%;
+    margin-top: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+  }
+  .settings-container .buttons-container {
+    justify-self: flex-end;
+    margin: 0;
+    margin-top: auto;
+  }
+}
+
 /*# sourceMappingURL=styles.css.map */
