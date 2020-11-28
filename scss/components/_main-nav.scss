@@ -1,293 +1,293 @@
-.main-header {
-    background-color: $primary-color;
-}
-
-.main-nav {
-    color: $font-accent-color;
-    height: 100%;
-    padding: 10px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-
-.logo {
-    margin-left: 15px;
-    font-size: 1.25rem;
-    /*20px*/
-}
-
-.trademark {
-    font-size: 0.75rem;
-    /*12px*/
-    vertical-align: super;
-}
-
-.bold {
-    font-weight: $font-weight-bold;
-}
-
-.right {
-    margin-left: auto;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.mobile-search-box {
-    margin: 0 10px;
-    input {
-        border-radius: 3px;
-        height: 30px;
-        border: none;
-        transform: translate3d(5%, 0, 0);
-        opacity: 0%;
-    }
-}
-
-.slideOut {
-    animation: slideOut 0.2s ease-in-out;
-    animation-fill-mode: forwards;
-}
-
-.slideIn {
-    animation: slideIn 0.3s ease-in-out;
-    animation-fill-mode: forwards;
-}
-
-.search {
-    margin-right: 25px;
-    font-weight: $font-weight-reg;
-    font-size: 1.55rem;
-    @include transition(transform, 0.2s, ease);
-    &:hover {
-        @include rotate(-15deg);
-    }
-}
-
-.notifications {
-    align-self: flex-end;
-    width: 1.25rem;
-    /* 20px */
-}
-
-.bell {
-    width: 100%;
-    height: 100%;
-    vertical-align: bottom;
-    @include transition(transform, 0.2s, ease);
-    &:hover {
-        @include rotate(15deg);
-    }
-}
-
-.notification-badge {
-    position: relative;
-    width: 7px;
-    height: 7px;
-    border-radius: 50%;
-    background-color: green;
-    top: -25px;
-    left: 11px;
-    visibility: visible;
-}
-
-.user-info {
-    text-align: center;
-}
-
-.user-name,
-.profile-pic {
-    display: none;
-}
-
-.profile-pic {
-    margin-left: 10px;
-}
-
-.menu {
-    display: inline-block;
-    margin-left: 15px;
-    padding: 0 10px 0 15px;
-    font-size: 1.875rem;
-    /*30px*/
-    border-left: 1px solid $secondary-color;
-}
-
-
-/* Notifications Dropdown */
-
-.notifications-dropdown {
-    width: 50%;
-    padding: 1px;
-    background-color: #fff;
-    position: absolute;
-    right: 0;
-    z-index: 1;
-    float: right;
-    a {
-        color: #000;
-    }
-}
-
-.notification {
-    display: block;
-    padding: 15px;
-    border-bottom: 0.5px solid gray;
-    &:hover,
-    &:active {
-        background-color: darken(#fff, 5%);
-    }
-}
-
-.drop {
-    animation: drop 0.2s ease-in-out;
-    animation-fill-mode: forwards;
-}
-
-.lift {
-    animation: lift 0.2s ease-in-out;
-    animation-fill-mode: forwards;
-}
-
-
-/*Mobile Dropdown Menu*/
-
-.mobile-secondary-nav {
-    background-color: $secondary-color;
-    width: 100%;
-    height: 80px;
-    display: flex;
-    align-items: center;
-}
-
-.mobile-dropdown {
-    height: 100%;
-    flex-basis: 75%;
-    display: flex;
-    align-items: center;
-    justify-content: space-around;
-    li {
-        display: inline-block;
-        flex-basis: 33%;
-        height: 100%;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-    }
-}
-
-.mobile-user-info {
-    flex-basis: 25%;
-    height: 100%;
-    color: #fff;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    border-left: 1px solid #fff;
-}
-
-.mobile-profile-pic {
-    display: block;
-    border-radius: 50%;
-    height: 40px;
-    width: 40px;
-}
-
-.mobile-user-name {
-    display: block;
-    text-align: center;
-    font-size: 0.875rem;
-}
-
-
-/* Hover Effects for Nav Options */
-
-.nav-option {
-    border-bottom: 2px solid transparent;
-    transition: border-bottom 0.2s ease;
-}
-
-.nav-option:hover,
-.nav-option:active {
-    background-color: darken($secondary-color, 5%);
-    border-bottom: 2px solid $highlight-color;
-}
-
-
-/* Cursor on Hover */
-
-.main-nav li:hover,
-.mobile-dropdown li,
-.mobile-user-info {
-    cursor: pointer;
-}
-
-
-/* Side Nav Bar for Larger Screens */
-
-.side-bar {
-    display: none;
-}
-
-
-/*-------------------------------*/
-
-.active {
-    border-bottom: 2px solid $highlight-color;
-}
-
-.hidden {
-    display: none;
-}
-
-//Media Queries
-@media (min-width:768px) {
-    main {
-        width: 100%;
-        display: grid;
-        grid-template-columns: 50px 1fr;
-    }
-    .side-bar {
-        display: inline-block;
-        background-color: $secondary-color;
-        text-align: center;
-    }
-    .side-nav {
-        height: 10%;
-        display: flex;
-        flex-direction: column;
-        justify-content: space-around;
-        align-items: center;
-    }
-    #side-nav-dashboard {
-        margin-left: -2px;
-    }
-    /* Main Nav */
-    .search,
-    .menu {
-        display: none;
-    }
-    .profile-pic,
-    .user-name {
-        display: inline-block;
-        height: 100%;
-    }
-    .notifications {
-        margin-right: 10px;
-    }
-    .user-info {
-        justify-self: flex-end;
-        margin-left: 10px;
-        padding: 0 10px;
-        border-left: 1px solid $secondary-color;
-        display: flex;
-        flex-direction: row;
-        justify-content: space-between;
-        align-items: center;
-    }
-    .user-name {
-        margin-left: 10px;
-    }
-}
+        .main-header {
+            background-color: $primary-color;
+        }
+        
+        .main-nav {
+            color: $font-accent-color;
+            height: 100%;
+            padding: 10px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .logo {
+            margin-left: 15px;
+            font-size: 1.25rem;
+            /*20px*/
+        }
+        
+        .trademark {
+            font-size: 0.75rem;
+            /*12px*/
+            vertical-align: super;
+        }
+        
+        .bold {
+            font-weight: $font-weight-bold;
+        }
+        
+        .right {
+            margin-left: auto;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        
+        .mobile-search-box {
+            margin: 0 10px;
+            input {
+                border-radius: 3px;
+                height: 30px;
+                border: none;
+                transform: translate3d(5%, 0, 0);
+                opacity: 0%;
+            }
+        }
+        
+        .slideOut {
+            animation: slideOut 0.2s ease-in-out;
+            animation-fill-mode: forwards;
+        }
+        
+        .slideIn {
+            animation: slideIn 0.3s ease-in-out;
+            animation-fill-mode: forwards;
+        }
+        
+        .search {
+            margin-right: 25px;
+            font-weight: $font-weight-reg;
+            font-size: 1.55rem;
+            @include transition(transform, 0.2s, ease);
+            &:hover {
+                @include rotate(-15deg);
+            }
+        }
+        
+        .notifications {
+            align-self: flex-end;
+            width: 1.25rem;
+            /* 20px */
+        }
+        
+        .bell {
+            width: 100%;
+            height: 100%;
+            vertical-align: bottom;
+            @include transition(transform, 0.2s, ease);
+            &:hover {
+                @include rotate(15deg);
+            }
+        }
+        
+        .notification-badge {
+            position: relative;
+            width: 7px;
+            height: 7px;
+            border-radius: 50%;
+            background-color: green;
+            top: -25px;
+            left: 11px;
+            visibility: visible;
+        }
+        
+        .user-info {
+            text-align: center;
+        }
+        
+        .user-name,
+        .profile-pic {
+            display: none;
+        }
+        
+        .profile-pic {
+            margin-left: 10px;
+        }
+        
+        .menu {
+            display: inline-block;
+            margin-left: 15px;
+            padding: 0 10px 0 15px;
+            font-size: 1.875rem;
+            /*30px*/
+            border-left: 1px solid $secondary-color;
+        }
+        /* Notifications Dropdown */
+        
+        .notifications-dropdown {
+            width: 50%;
+            padding: 1px;
+            background-color: #fff;
+            position: absolute;
+            right: 0;
+            z-index: 1;
+            float: right;
+            a {
+                color: #000;
+            }
+        }
+        
+        .notification {
+            display: block;
+            padding: 15px;
+            border-bottom: 0.5px solid gray;
+            &:hover,
+            &:active {
+                background-color: darken(#fff, 5%);
+            }
+        }
+        
+        .drop {
+            animation: drop 0.2s ease-in-out;
+            animation-fill-mode: forwards;
+        }
+        
+        .lift {
+            animation: lift 0.2s ease-in-out;
+            animation-fill-mode: forwards;
+        }
+        /*Mobile Dropdown Menu*/
+        
+        .mobile-secondary-nav {
+            background-color: $secondary-color;
+            width: 100%;
+            height: 80px;
+            display: flex;
+            align-items: center;
+        }
+        
+        .mobile-dropdown {
+            height: 100%;
+            flex-basis: 75%;
+            display: flex;
+            align-items: center;
+            justify-content: space-around;
+            li {
+                display: inline-block;
+                flex-basis: 33%;
+                height: 100%;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
+        }
+        
+        .mobile-user-info {
+            flex-basis: 25%;
+            height: 100%;
+            color: #fff;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            border-left: 1px solid #fff;
+        }
+        
+        .mobile-profile-pic {
+            display: block;
+            border-radius: 50%;
+            height: 40px;
+            width: 40px;
+        }
+        
+        .mobile-user-name {
+            display: block;
+            text-align: center;
+            font-size: 0.875rem;
+        }
+        /* Hover Effects for Nav Options */
+        
+        .nav-option {
+            border-bottom: 2px solid transparent;
+            transition: border-bottom 0.2s ease;
+        }
+        
+        .nav-option:hover,
+        .nav-option:active {
+            background-color: darken($secondary-color, 5%);
+            border-bottom: 2px solid $highlight-color;
+        }
+        /* Cursor on Hover */
+        
+        .main-nav li:hover,
+        .mobile-dropdown li,
+        .mobile-user-info {
+            cursor: pointer;
+        }
+        /* Side Nav Bar for Larger Screens */
+        
+        .side-bar {
+            display: none;
+        }
+        /*-------------------------------*/
+        
+        .active {
+            border-bottom: 2px solid $highlight-color;
+        }
+        
+        .hidden {
+            display: none;
+        }
+        
+        //Media Queries
+        @media (min-width:768px) {
+            main {
+                width: 100%;
+                display: grid;
+                grid-template-columns: 50px 1fr;
+            }
+            .side-bar {
+                display: inline-block;
+                background-color: $secondary-color;
+                text-align: center;
+            }
+            .side-nav {
+                margin-top: 15px;
+                height: 15%;
+                display: flex;
+                flex-direction: column;
+                justify-content: space-around;
+                align-items: center;
+                li {
+                    width: 100%;
+                }
+                li:hover,
+                li:active {
+                    border-left: 2px solid $highlight-color;
+                }
+            }
+            #side-nav-dashboard {
+                margin-left: -2px;
+            }
+            .active {
+                border-bottom: 2px solid transparent;
+                border-left: 2px solid $highlight-color;
+            }
+            /* Main Nav */
+            .search,
+            .menu {
+                display: none;
+            }
+            .profile-pic,
+            .user-name {
+                display: inline-block;
+                height: 100%;
+            }
+            .notifications {
+                margin-right: 10px;
+            }
+            .user-info {
+                justify-self: flex-end;
+                margin-left: 10px;
+                padding: 0 10px;
+                border-left: 1px solid $secondary-color;
+                display: flex;
+                flex-direction: row;
+                justify-content: space-between;
+                align-items: center;
+            }
+            .user-name {
+                margin-left: 10px;
+            }
+        }

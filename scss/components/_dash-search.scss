@@ -1,0 +1,39 @@
+/* Dashboard and Search */
+
+.dash-search {
+    display: flex;
+}
+
+.dash-tab {
+    display: inline-block;
+    height: 100%;
+    flex-basis: 20%;
+    margin-top: 0;
+    padding: 10px;
+}
+
+.search-container {
+    flex-basis: 80%;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    padding-right: 20px;
+    background-color: lighten($separator-color, 10%);
+    border-left: 1px solid $separator-color;
+}
+
+#search-field {
+    height: 30px;
+    width: 300px;
+    border-radius: 5px;
+    border: 1px solid $separator-color;
+    padding: 5px;
+    outline-color: $separator-color;
+}
+
+.search-icon-main {
+    display: inline-block;
+    margin-left: -20px;
+    color: $primary-color;
+    font-size: 1.2rem;
+}
