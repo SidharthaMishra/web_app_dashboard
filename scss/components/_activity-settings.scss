@@ -203,6 +203,7 @@ button {
         border-right: 1px solid $separator-color;
     }
     .settings-container {
+        padding-bottom: 20px;
         display: flex;
         flex-direction: column;
         form {
@@ -216,6 +217,14 @@ button {
             justify-self: flex-end;
             margin: 0;
             margin-top: auto;
+        }
+        button {
+            display: block;
+            width: 100%;
+            margin: 14px 0;
+        }
+        .button-cancel {
+            margin-bottom: 0;
         }
     }
 }
