@@ -383,6 +383,7 @@ template {
 /* ============================================= */
 h1 {
   font-size: 1.5rem;
+  font-weight: 300;
 }
 
 h2 {
@@ -912,6 +913,11 @@ img {
   .daily-traffic-container {
     border-right: 1px solid #d3d3d3;
     padding-right: 10px;
+  }
+
+  #dailyTrafficGraph,
+#mobileUsersGraph {
+    margin-top: 20px;
   }
 
   .mobile-users-container {

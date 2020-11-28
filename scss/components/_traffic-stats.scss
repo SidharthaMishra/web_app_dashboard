@@ -64,6 +64,10 @@
         border-right: 1px solid $separator-color;
         padding-right: 10px;
     }
+    #dailyTrafficGraph,
+    #mobileUsersGraph {
+        margin-top: 20px;
+    }
     .mobile-users-container {
         padding-left: 10px;
     }
