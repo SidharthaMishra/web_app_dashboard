@@ -19,3 +19,21 @@
         text-align: center;
     }
 }
+
+@media (min-width:768px) {
+    .alert {
+        padding: 10px;
+    }
+    .alert-content {
+        h4,
+        p {
+            display: block;
+        }
+        p {
+            margin-left: 10px;
+        }
+        display: flex;
+        justify-content: space-between;
+        align-items:center;
+    }
+}
