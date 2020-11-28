@@ -666,6 +666,11 @@ img {
   cursor: pointer;
 }
 
+/* Side Nav Bar for Larger Screens */
+.side-bar {
+  display: none;
+}
+
 /*-------------------------------*/
 .active {
   border-bottom: 2px solid #58cf76;
@@ -675,6 +680,31 @@ img {
   display: none;
 }
 
+@media (min-width: 768px) {
+  main {
+    width: 100%;
+    display: grid;
+    grid-template-columns: 50px 1fr;
+  }
+
+  .side-bar {
+    display: inline-block;
+    background-color: #595b83;
+    text-align: center;
+  }
+
+  .side-nav {
+    height: 10%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+  }
+
+  #side-nav-dashboard {
+    margin-left: -2px;
+  }
+}
 .profile-pic {
   border-radius: 50%;
   width: 45px;
