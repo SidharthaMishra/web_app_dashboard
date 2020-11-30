@@ -1,4 +1,5 @@
 document.addEventListener("DOMContentLoaded", function() {
+    "use strict";
     //Main Nav
     const searchIcon = document.querySelector(".search");
     const mobileSearchBox = document.querySelector(".mobile-search-box>input");
