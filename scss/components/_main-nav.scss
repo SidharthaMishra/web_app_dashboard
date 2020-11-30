@@ -36,12 +36,21 @@
         
         .mobile-search-box {
             margin: 0 10px;
+            position: absolute;
             input {
+                z-index: 100;
                 border-radius: 3px;
                 height: 30px;
+                width: 150px;
                 border: none;
                 transform: translate3d(5%, 0, 0);
                 opacity: 0%;
+                @media (min-width: 375px) and (max-width: 424px) {
+                    width: 200px;
+                }
+            }
+            @media (min-width:425px) {
+                left: 120px;
             }
         }
         
