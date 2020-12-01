@@ -28,7 +28,9 @@ body {
 }
 
 .main-container {
-    width: 100vw;
+    width: 100%;
+    /*vw*/
+    overflow-x: none;
     background-color: #fff;
 }
 
@@ -55,4 +57,17 @@ img {
 
 .hidden {
     display: none;
+}
+
+@media (min-width:768px) {
+    main {
+        display: grid;
+        grid-template-columns: 50px 1fr;
+    }
+}
+
+@media (min-width:1024px) {
+    body {
+        font-size: 1.2rem;
+    }
 }

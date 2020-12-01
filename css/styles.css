@@ -417,7 +417,9 @@ body {
 }
 
 .main-container {
-  width: 100vw;
+  width: 100%;
+  /*vw*/
+  overflow-x: none;
   background-color: #fff;
 }
 
@@ -446,6 +448,17 @@ img {
   display: none;
 }
 
+@media (min-width: 768px) {
+  main {
+    display: grid;
+    grid-template-columns: 50px 1fr;
+  }
+}
+@media (min-width: 1024px) {
+  body {
+    font-size: 1.2rem;
+  }
+}
 .main-header {
   background-color: #7c80c6;
 }
@@ -691,12 +704,6 @@ img {
 }
 
 @media (min-width: 768px) {
-  main {
-    width: 100%;
-    display: grid;
-    grid-template-columns: 50px 1fr;
-  }
-
   .side-bar {
     display: inline-block;
     background-color: #595b83;
@@ -857,6 +864,20 @@ img {
   }
   .alert-content p {
     margin-left: 10px;
+  }
+}
+@media (min-width: 920px) {
+  .alert {
+    font-size: 0.8rem;
+  }
+
+  .alert-content {
+    justify-content: flex-start;
+  }
+}
+@media (min-width: 1024px) {
+  .alert {
+    font-size: 0.9rem;
   }
 }
 .stats-container {
@@ -1223,6 +1244,20 @@ button:hover {
   }
   .settings-container .button-cancel {
     margin-bottom: 0;
+  }
+}
+@media (min-width: 920px) {
+  .settings-container .buttons-container {
+    margin-top: 43px;
+  }
+  .settings-container button {
+    display: inline-block;
+    width: 49.3%;
+  }
+}
+@media (min-width: 1024px) {
+  .settings-container .buttons-container {
+    margin-top: 66px;
   }
 }
 

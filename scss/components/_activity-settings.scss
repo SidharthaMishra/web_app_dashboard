@@ -228,3 +228,23 @@ button {
         }
     }
 }
+
+@media (min-width:920px) {
+    .settings-container {
+        .buttons-container {
+            margin-top: 43px;
+        }
+        button {
+            display: inline-block;
+            width: 49.3%;
+        }
+    }
+}
+
+@media (min-width:1024px) {
+    .settings-container {
+        .buttons-container {
+            margin-top: 66px;
+        }
+    }
+}
