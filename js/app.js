@@ -21,6 +21,7 @@ document.addEventListener("DOMContentLoaded", function() {
     const messageBox = document.querySelector(".message-box");
     const sendButton = document.querySelector(".send-button");
     const messageAlertBox = document.querySelector(".message-alert-box");
+    const autocomplete = document.querySelector(".autocomplete");
 
     //Settings
     const emailSwitch = document.querySelector("#email-setting");
@@ -293,8 +294,70 @@ document.addEventListener("DOMContentLoaded", function() {
         }
     });
 
-    //Send Button Event Listener
+    //-------------------------//
+    // User Search Autocomplete
+    //-------------------------//    
 
+    let Users = {
+        "victoria chambers": "victoria.chambers80@example.com",
+        "dale byrd": "dale.byrd52@example.com",
+        "dawn wood": "dawn.wood16@example.com",
+        "dan oliver": "dan.oliver82@example.com"
+    };
+
+    let searchUserInput; //contains input text from User search field
+
+    //Function Hides/Shows the Aucomplete ul containing User's Info
+    function autocompleteHideShow(input) {
+        if (input.length > 0) {
+            if (autocomplete.classList.contains("hidden")) {
+                autocomplete.classList.remove("hidden");
+            }
+        } else {
+            autocomplete.classList.add("hidden");
+        }
+    }
+
+    //Function Populates the Autocomplete ul with relevant User's Info
+    function autoCompleteShowData(input) {
+        let allUsers = Object.keys(Users);
+        autocomplete.innerHTML = "";
+        //Check for Usernames that contain the input text
+        if (input.length > 0) {
+            for (let user in allUsers) {
+                if (allUsers[user].includes(input)) {
+                    //Add to autocomplete ul
+                    let li = document.createElement("li");
+                    let name = document.createElement("h3");
+                    let email = document.createElement("p");
+                    li.className = "card";
+                    name.innerHTML = `${allUsers[user]}`;
+                    email.className = "email";
+                    email.innerHTML = `${Users[allUsers[user]]}`;
+                    li.appendChild(name);
+                    li.appendChild(email);
+                    autocomplete.appendChild(li);
+                }
+            }
+        }
+    }
+
+    searchUserBox.addEventListener("input", function(event) {
+        searchUserInput = searchUserBox.value.toLowerCase();
+        autocompleteHideShow(searchUserInput);
+        autoCompleteShowData(searchUserInput);
+    });
+
+    autocomplete.addEventListener("click", function(event) {
+        let li = event.target;
+        if (li.tagName !== "LI") {
+            li = li.parentNode;
+        }
+        searchUserBox.value = li.querySelector("h3").textContent;
+        autocomplete.classList.add("hidden");
+    });
+
+    //Send Button Event Listener
     sendButton.addEventListener("click", function(event) {
         event.preventDefault();
         let messageAlert = document.createElement("li");

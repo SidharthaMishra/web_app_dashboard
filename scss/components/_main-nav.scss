@@ -137,7 +137,8 @@
             }
         }
         
-        .notification {
+        .notification,
+        .card {
             display: block;
             padding: 15px;
             border-bottom: 0.5px solid gray;

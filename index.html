@@ -421,7 +421,10 @@
                     </ul>
                     <div class="message-form-container">
                         <form action="#" method="post" class="messsage-form">
-                            <input class="user-search-box" type="search" placeholder="Search for User" required>
+                            <div class="user-search-container">
+                                <input class="user-search-box" type="search" placeholder="Search for User" required>
+                                <ul class="autocomplete hidden"></ul>
+                            </div>
                             <textarea class="message-box" name="message-box" id="message-box" cols="30" rows="10" placeholder="Message for User" required></textarea>
                             <button class="button-default send-button" type="submit">Send</button>
                         </form>
