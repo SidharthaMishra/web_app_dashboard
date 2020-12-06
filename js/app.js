@@ -314,16 +314,26 @@ document.addEventListener("DOMContentLoaded", function() {
         }
     }
 
-    function autoCompleteFetchData(input) {
+    function autoCompleteShowData(input) {
         let allUsers = Object.keys(Users);
-        // let foundUsers = [];
         autocomplete.innerHTML = "";
         //Check for Usernames that contain the input text
         if (input.length > 0) {
             for (let user in allUsers) {
+
+
                 if (allUsers[user].includes(input)) {
-                    // foundUsers.push(allUsers[user]);
-                    autocomplete.innerHTML += `<li class="notification"><h3>${allUsers[user]}</h3><p class="email">${Users[allUsers[user]]}</p><li>`;
+                    //Add to autocomplete ul
+                    let li = document.createElement("li");
+                    let name = document.createElement("h3");
+                    let email = document.createElement("p");
+                    li.className = "notification";
+                    name.innerHTML = `${allUsers[user]}`;
+                    email.className = "email";
+                    email.innerHTML = `${Users[allUsers[user]]}`;
+                    li.appendChild(name);
+                    li.appendChild(email);
+                    autocomplete.appendChild(li);
                 }
             }
         }
@@ -334,8 +344,7 @@ document.addEventListener("DOMContentLoaded", function() {
         searchUserInput = searchUserBox.value.toLowerCase();
         console.log(searchUserInput);
         autocompleteHideShow(searchUserInput);
-        autoCompleteFetchData(searchUserInput);
-
+        autoCompleteShowData(searchUserInput);
     });
 
     //Send Button Event Listener
