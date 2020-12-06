@@ -294,7 +294,10 @@ document.addEventListener("DOMContentLoaded", function() {
         }
     });
 
-    //User Search Autocomplete
+    //-------------------------//
+    // User Search Autocomplete
+    //-------------------------//    
+
     let Users = {
         "victoria chambers": "victoria.chambers80@example.com",
         "dale byrd": "dale.byrd52@example.com",
@@ -304,6 +307,7 @@ document.addEventListener("DOMContentLoaded", function() {
 
     let searchUserInput; //contains input text from User search field
 
+    //Function Hides/Shows the Aucomplete ul containing User's Info
     function autocompleteHideShow(input) {
         if (input.length > 0) {
             if (autocomplete.classList.contains("hidden")) {
@@ -314,6 +318,7 @@ document.addEventListener("DOMContentLoaded", function() {
         }
     }
 
+    //Function Populates the Autocomplete ul with relevant User's Info
     function autoCompleteShowData(input) {
         let allUsers = Object.keys(Users);
         autocomplete.innerHTML = "";
@@ -335,18 +340,24 @@ document.addEventListener("DOMContentLoaded", function() {
                 }
             }
         }
-
     }
 
     searchUserBox.addEventListener("input", function(event) {
         searchUserInput = searchUserBox.value.toLowerCase();
-        console.log(searchUserInput);
         autocompleteHideShow(searchUserInput);
         autoCompleteShowData(searchUserInput);
     });
 
-    //Send Button Event Listener
+    autocomplete.addEventListener("click", function(event) {
+        let li = event.target;
+        if (li.tagName !== "LI") {
+            li = li.parentNode;
+        }
+        searchUserBox.value = li.querySelector("h3").textContent;
+        autocomplete.classList.add("hidden");
+    });
 
+    //Send Button Event Listener
     sendButton.addEventListener("click", function(event) {
         event.preventDefault();
         let messageAlert = document.createElement("li");

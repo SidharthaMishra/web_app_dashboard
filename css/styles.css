@@ -1139,6 +1139,7 @@ img {
 
 .user-search-box {
   height: 30px;
+  text-transform: capitalize;
 }
 
 .autocomplete {
@@ -1149,7 +1150,12 @@ img {
   /* Additional li styles being applied from notification class/rule also used for notifications in main-nav */
 }
 .autocomplete h3 {
+  display: inline-block;
   text-transform: capitalize;
+}
+.autocomplete p {
+  display: inline-block;
+  width: 100%;
 }
 
 /* Autocomplete li User name */

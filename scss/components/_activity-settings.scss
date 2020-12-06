@@ -114,6 +114,7 @@
     
     .user-search-box {
         height: 30px;
+        text-transform: capitalize;
     }
     
     .autocomplete {
@@ -122,7 +123,12 @@
         top: 30px;
         background-color: #fff;
         h3 {
+            display: inline-block;
             text-transform: capitalize;
+        }
+        p {
+            display: inline-block;
+            width: 100%;
         }
         /* Additional li styles being applied from notification class/rule also used for notifications in main-nav */
     }
