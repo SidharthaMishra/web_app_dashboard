@@ -419,7 +419,6 @@ body {
 .main-container {
   width: 100%;
   /*vw*/
-  overflow-x: none;
   background-color: #fff;
 }
 
