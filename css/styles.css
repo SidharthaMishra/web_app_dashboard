@@ -602,12 +602,15 @@ img {
   color: #000;
 }
 
-.notification {
+.notification,
+.card {
   display: block;
   padding: 15px;
   border-bottom: 0.5px solid gray;
 }
-.notification:hover, .notification:active {
+.notification:hover, .notification:active,
+.card:hover,
+.card:active {
   background-color: #f2f2f2;
 }
 
@@ -1143,6 +1146,7 @@ img {
   position: absolute;
   top: 30px;
   background-color: #fff;
+  /* Additional li styles being applied from notification class/rule also used for notifications in main-nav */
 }
 .autocomplete h3 {
   text-transform: capitalize;

@@ -320,14 +320,12 @@ document.addEventListener("DOMContentLoaded", function() {
         //Check for Usernames that contain the input text
         if (input.length > 0) {
             for (let user in allUsers) {
-
-
                 if (allUsers[user].includes(input)) {
                     //Add to autocomplete ul
                     let li = document.createElement("li");
                     let name = document.createElement("h3");
                     let email = document.createElement("p");
-                    li.className = "notification";
+                    li.className = "card";
                     name.innerHTML = `${allUsers[user]}`;
                     email.className = "email";
                     email.innerHTML = `${Users[allUsers[user]]}`;
