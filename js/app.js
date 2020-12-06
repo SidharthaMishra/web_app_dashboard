@@ -21,6 +21,7 @@ document.addEventListener("DOMContentLoaded", function() {
     const messageBox = document.querySelector(".message-box");
     const sendButton = document.querySelector(".send-button");
     const messageAlertBox = document.querySelector(".message-alert-box");
+    const autocomplete = document.querySelector(".autocomplete");
 
     //Settings
     const emailSwitch = document.querySelector("#email-setting");
@@ -291,6 +292,50 @@ document.addEventListener("DOMContentLoaded", function() {
         options: {
             rotation: 4.25
         }
+    });
+
+    //User Search Autocomplete
+    let Users = {
+        "victoria chambers": "victoria.chambers80@example.com",
+        "dale byrd": "dale.byrd52@example.com",
+        "dawn wood": "dawn.wood16@example.com",
+        "dan oliver": "dan.oliver82@example.com"
+    };
+
+    let searchUserInput; //contains input text from User search field
+
+    function autocompleteHideShow(input) {
+        if (input.length > 0) {
+            if (autocomplete.classList.contains("hidden")) {
+                autocomplete.classList.remove("hidden");
+            }
+        } else {
+            autocomplete.classList.add("hidden");
+        }
+    }
+
+    function autoCompleteFetchData(input) {
+        let allUsers = Object.keys(Users);
+        let foundUsers = [];
+        autocomplete.innerHTML = "";
+        //Check for Usernames that contain the input text
+        if (input.length > 0) {
+            for (let user in allUsers) {
+                if (allUsers[user].includes(input)) {
+                    foundUsers.push(allUsers[user]);
+                    autocomplete.innerHTML += allUsers[user] + "<br>";
+                }
+            }
+        }
+
+    }
+
+    searchUserBox.addEventListener("input", function(event) {
+        searchUserInput = searchUserBox.value.toLowerCase();
+        console.log(searchUserInput);
+        autocompleteHideShow(searchUserInput);
+        autoCompleteFetchData(searchUserInput);
+
     });
 
     //Send Button Event Listener
