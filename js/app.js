@@ -316,13 +316,13 @@ document.addEventListener("DOMContentLoaded", function() {
 
     function autoCompleteFetchData(input) {
         let allUsers = Object.keys(Users);
-        let foundUsers = [];
+        // let foundUsers = [];
         autocomplete.innerHTML = "";
         //Check for Usernames that contain the input text
         if (input.length > 0) {
             for (let user in allUsers) {
                 if (allUsers[user].includes(input)) {
-                    foundUsers.push(allUsers[user]);
+                    // foundUsers.push(allUsers[user]);
                     autocomplete.innerHTML += `<li class="notification"><h3>${allUsers[user]}</h3><p class="email">${Users[allUsers[user]]}</p><li>`;
                 }
             }
