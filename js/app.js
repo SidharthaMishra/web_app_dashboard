@@ -323,7 +323,7 @@ document.addEventListener("DOMContentLoaded", function() {
             for (let user in allUsers) {
                 if (allUsers[user].includes(input)) {
                     foundUsers.push(allUsers[user]);
-                    autocomplete.innerHTML += allUsers[user] + "<br>";
+                    autocomplete.innerHTML += `<li class="notification"><h3>${allUsers[user]}</h3><p class="email">${Users[allUsers[user]]}</p><li>`;
                 }
             }
         }
