@@ -1,261 +1,261 @@
-/* New Members and Recent Activity */
-
-.users-info-settings-container {
-    background-color: #fff;
-    width: 100%;
-    padding: 5px 0;
-}
-
-.new-members-container,
-.recent-activity-container,
-.message-user-container,
-.settings-container {
-    padding: 20px 5px 0 5px;
-    border-bottom: 1px solid $separator-color;
-    h2 {
-        margin: 5px 0 15px 5px;
-    }
-}
-
-.new-members-list,
-.recent-activity-container {
-    li {
-        width: 100%;
-        padding: 18px 0;
-        display: flex;
-    }
-    li:not(:last-child) {
-        border-bottom: 1px solid $separator-color;
-    }
-}
-
-.member-info,
-.activity-info {
-    height: 100%;
-    flex-basis: 80%;
-    display: flex;
-    align-items: center;
-}
-
-.activity-info {
-    flex-basis: 100%;
-}
-
-.member-pic-container {
-    text-align: center;
-    flex-basis: 10%;
-}
-
-.member-pic {
-    border-radius: 50%;
-    width: 40px;
-    height: 40px;
-}
-
-.member-details,
-.activity-details {
-    width: 100%;
-    padding-left: 3px;
-    flex-basis: 80%;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: flex-start;
-}
-
-.member-name {
-    font-size: 1rem;
-}
-
-.email,
-.activity-time {
-    font-size: 0.8rem;
-    margin-top: 3px;
-    color: $primary-color;
-}
-
-.date,
-.more-info {
-    flex-basis: 10%;
-    font-size: 0.7rem;
-    display: flex;
-    align-items: center;
-    justify-content: flex-end;
-    margin-left: auto;
-}
-
-.more-info {
-    justify-content: center;
-    font-size: 1.1rem;
-    color: $primary-color;
-}
-
-
-/* Message User Section */
-
-.message-user-container {
-    padding-bottom: 20px;
-}
-
-.message-form-container {
-    padding-top: 18px;
-}
-
-.user-search-container {
-    position: relative;
-}
-
-.user-search-box,
-.message-box {
-    width: 100%;
-    margin: 0 0 10px 0;
-    border: 0.5px solid $separator-color;
-    border-radius: 3px;
-    padding: 5px;
-}
-
-.user-search-box {
-    height: 30px;
-}
-
-.autocomplete {
-    width: 100%;
-    position: absolute;
-    top: 30px;
-    background-color: #fff;
-}
-
-.message-box {
-    resize: none;
-}
-
-button {
-    text-transform: uppercase;
-    color: #fff;
-    width: 100%;
-    height: 30px;
-    margin: 5px 0;
-    border: none;
-    border-radius: 5px;
-    font-weight: $font-weight-bold;
-    &:hover {
-        cursor: pointer;
-    }
-}
-
-.button-default {
-    background-color: $primary-color;
-    &:hover,
-    &:active {
-        background-color: darken($primary-color, 5%);
-    }
-}
-
-.button-cancel {
-    background-color: $button-cancel;
-    &:hover,
-    &:active {
-        background-color: darken($button-cancel, 5%);
-    }
-}
-
-.failed {
-    background-color: #ff0000;
-}
-
-.success {
-    background-color: $highlight-color;
-}
-
-
-/* Settings */
-
-.settings-form {
-    margin: 20px 0;
-    .toggle-container {
-        margin: 20px 5px;
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        strong {
-            flex-basis: 60%;
-        }
-        span {
-            margin-left: auto;
-            width: 80px;
-        }
-    }
-    label {
-        margin-right: 20px;
-    }
-    div {
-        margin: 20px 5px;
-    }
-    select {
-        width: 100%;
-        font-weight: $font-weight-reg;
-    }
-    button {
-        width: 49.3%;
-    }
-}
-
-@media (min-width:768px) {
+    /* New Members and Recent Activity */
+    
     .users-info-settings-container {
-        display: grid;
-        grid-template-columns: repeat(2, 1fr);
-        &>div {
-            padding-left: 20px;
-            padding-right: 20px;
+        background-color: #fff;
+        width: 100%;
+        padding: 5px 0;
+    }
+    
+    .new-members-container,
+    .recent-activity-container,
+    .message-user-container,
+    .settings-container {
+        padding: 20px 5px 0 5px;
+        border-bottom: 1px solid $separator-color;
+        h2 {
+            margin: 5px 0 15px 5px;
         }
     }
-    .new-members-container,
-    .message-user-container {
-        border-right: 1px solid $separator-color;
+    
+    .new-members-list,
+    .recent-activity-container {
+        li {
+            width: 100%;
+            padding: 18px 0;
+            display: flex;
+        }
+        li:not(:last-child) {
+            border-bottom: 1px solid $separator-color;
+        }
     }
-    .settings-container {
-        padding-bottom: 20px;
+    
+    .member-info,
+    .activity-info {
+        height: 100%;
+        flex-basis: 80%;
+        display: flex;
+        align-items: center;
+    }
+    
+    .activity-info {
+        flex-basis: 100%;
+    }
+    
+    .member-pic-container {
+        text-align: center;
+        flex-basis: 10%;
+    }
+    
+    .member-pic {
+        border-radius: 50%;
+        width: 40px;
+        height: 40px;
+    }
+    
+    .member-details,
+    .activity-details {
+        width: 100%;
+        padding-left: 3px;
+        flex-basis: 80%;
         display: flex;
         flex-direction: column;
-        form {
-            height: 100%;
-            margin-top: auto;
-            display: flex;
-            flex-direction: column;
-            justify-content: space-evenly;
-        }
-        .buttons-container {
-            justify-self: flex-end;
-            margin: 0;
-            margin-top: auto;
-        }
-        button {
-            display: block;
-            width: 100%;
-            margin: 14px 0;
-        }
-        .button-cancel {
-            margin-bottom: 0;
+        justify-content: center;
+        align-items: flex-start;
+    }
+    
+    .member-name {
+        font-size: 1rem;
+    }
+    
+    .email,
+    .activity-time {
+        font-size: 0.8rem;
+        margin-top: 3px;
+        color: $primary-color;
+    }
+    
+    .date,
+    .more-info {
+        flex-basis: 10%;
+        font-size: 0.7rem;
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+        margin-left: auto;
+    }
+    
+    .more-info {
+        justify-content: center;
+        font-size: 1.1rem;
+        color: $primary-color;
+    }
+    /* Message User Section */
+    
+    .message-user-container {
+        padding-bottom: 20px;
+    }
+    
+    .message-form-container {
+        padding-top: 18px;
+    }
+    
+    .user-search-container {
+        position: relative;
+    }
+    
+    .user-search-box,
+    .message-box {
+        width: 100%;
+        margin: 0 0 10px 0;
+        border: 0.5px solid $separator-color;
+        border-radius: 3px;
+        padding: 5px;
+    }
+    
+    .user-search-box {
+        height: 30px;
+    }
+    
+    .autocomplete {
+        width: 100%;
+        position: absolute;
+        top: 30px;
+        background-color: #fff;
+        h3 {
+            text-transform: capitalize;
         }
     }
-}
-
-@media (min-width:920px) {
-    .settings-container {
-        .buttons-container {
-            margin-top: 43px;
+    /* Autocomplete li User name */
+    
+    .message-box {
+        resize: none;
+    }
+    
+    button {
+        text-transform: uppercase;
+        color: #fff;
+        width: 100%;
+        height: 30px;
+        margin: 5px 0;
+        border: none;
+        border-radius: 5px;
+        font-weight: $font-weight-bold;
+        &:hover {
+            cursor: pointer;
+        }
+    }
+    
+    .button-default {
+        background-color: $primary-color;
+        &:hover,
+        &:active {
+            background-color: darken($primary-color, 5%);
+        }
+    }
+    
+    .button-cancel {
+        background-color: $button-cancel;
+        &:hover,
+        &:active {
+            background-color: darken($button-cancel, 5%);
+        }
+    }
+    
+    .failed {
+        background-color: #ff0000;
+    }
+    
+    .success {
+        background-color: $highlight-color;
+    }
+    /* Settings */
+    
+    .settings-form {
+        margin: 20px 0;
+        .toggle-container {
+            margin: 20px 5px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            strong {
+                flex-basis: 60%;
+            }
+            span {
+                margin-left: auto;
+                width: 80px;
+            }
+        }
+        label {
+            margin-right: 20px;
+        }
+        div {
+            margin: 20px 5px;
+        }
+        select {
+            width: 100%;
+            font-weight: $font-weight-reg;
         }
         button {
-            display: inline-block;
             width: 49.3%;
         }
     }
-}
-
-@media (min-width:1024px) {
-    .settings-container {
-        .buttons-container {
-            margin-top: 66px;
+    
+    @media (min-width:768px) {
+        .users-info-settings-container {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            &>div {
+                padding-left: 20px;
+                padding-right: 20px;
+            }
+        }
+        .new-members-container,
+        .message-user-container {
+            border-right: 1px solid $separator-color;
+        }
+        .settings-container {
+            padding-bottom: 20px;
+            display: flex;
+            flex-direction: column;
+            form {
+                height: 100%;
+                margin-top: auto;
+                display: flex;
+                flex-direction: column;
+                justify-content: space-evenly;
+            }
+            .buttons-container {
+                justify-self: flex-end;
+                margin: 0;
+                margin-top: auto;
+            }
+            button {
+                display: block;
+                width: 100%;
+                margin: 14px 0;
+            }
+            .button-cancel {
+                margin-bottom: 0;
+            }
         }
     }
-}
+    
+    @media (min-width:920px) {
+        .settings-container {
+            .buttons-container {
+                margin-top: 43px;
+            }
+            button {
+                display: inline-block;
+                width: 49.3%;
+            }
+        }
+    }
+    
+    @media (min-width:1024px) {
+        .settings-container {
+            .buttons-container {
+                margin-top: 66px;
+            }
+        }
+    }

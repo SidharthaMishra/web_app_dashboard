@@ -1144,7 +1144,11 @@ img {
   top: 30px;
   background-color: #fff;
 }
+.autocomplete h3 {
+  text-transform: capitalize;
+}
 
+/* Autocomplete li User name */
 .message-box {
   resize: none;
 }
