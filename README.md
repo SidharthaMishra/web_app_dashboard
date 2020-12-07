@@ -64,6 +64,7 @@ web_app_dashboard
     |   |      |- toggle_switch
     |   |                |- LICENSE
     |   |                |- toggle-switch.css
+    |   |                |- toggle-switch.css.map
     |   |- styles.css
     |   |- styles.css.map
     |
