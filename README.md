@@ -52,8 +52,18 @@ web_app_dashboard
     |- css
     |   |
     |   |- vendor
-    |   |      |- LICENSE
-    |   |      |- toggle-switch.css
+    |   |      |- ionicons
+    |   |      |    |- fonts
+    |   |      |    |    |- ionicons.eot
+    |   |      |    |    |- ionicons.svg  
+    |   |      |    |    |- ionicons.ttf
+    |   |      |    |    |- ionicons.woff
+    |   |      |    |- ionicons.css
+    |   |      |    |- LICENSE
+    |   |      |
+    |   |      |- toggle_switch
+    |   |                |- LICENSE
+    |   |                |- toggle-switch.css
     |   |- styles.css
     |   |- styles.css.map
     |
