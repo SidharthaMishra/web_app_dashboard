@@ -118,12 +118,12 @@ web_app_dashboard
 ## Technologies Used
 
 - HTML
-- CSS
+- Sass/CSS
 - JS
 - Chart.js
 - WebStorage API
 - Google Fonts
-- ionicons
+- ionicons (https://ionicons.com/v2/)
 - CSS Toogle Switch (ghinda.net/css-toggle-switch/)
 - Color Hunt
 - Random User Generator (randomuser.me/photos)
