@@ -142,5 +142,6 @@ web_app_dashboard
 - Markdown (Documentation) 
 - Chrome Dev Tools
 - VS Code
+- Tested using Chrome, Safari, Firefox, and Opera
 
 ---
