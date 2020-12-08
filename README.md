@@ -19,8 +19,9 @@ https://sidharthamishra.github.io/web_app_dashboard/
 - Interactive Graphs and Charts featuring Site Traffic Data
 - Social Media Stats
 - Stats regarding Member Activities
-- The Ability to Save and Remember User's Settings using the Web Storage API
+- Message Form that displays Success or Error Alerts upon Submission
 - Autocomplete Search Functionality when searching for Users in the 'Message User' Section
+- The Ability to Save and Remember User's Settings Preferences using the Web Storage API
 
 ---
 ## Mockup
@@ -139,7 +140,7 @@ web_app_dashboard
 - Color Hunt
 - Random User Generator (randomuser.me/photos)
 - PicResize (picresize.com)
-- Markdown (Documentation) 
+- Markdown (Documentation)
 - Chrome Dev Tools
 - VS Code
 - Tested using Chrome, Safari, Firefox, and Opera
